@@ -8,7 +8,9 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
-			<array/>
+			<array>
+				<string>https://mercadolivre</string>
+			</array>
 		</dict>
 	</array>
 </dict>
