@@ -16,6 +16,13 @@ extension SplashPresenter: SplashPresenterProtocol {}
 
 // MARK: - ViewLifecycleable
 extension SplashPresenter: ViewLifecycleable {
-    func onViewDidLoad() {}
+    func onViewDidLoad() {
+        
+        let client = GetProductRootCategoriesClient()
+        client.getProductRootCategories() { response in
+            print(response)
+        }
+        
+    }
     func onViewWillAppear() {}
 }

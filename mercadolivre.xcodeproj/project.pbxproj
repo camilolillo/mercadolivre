@@ -42,7 +42,7 @@
 		4A6CABD02AFAA6D400B21E59 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABCF2AFAA6D400B21E59 /* AppEnvironment.swift */; };
 		4A6CABD22AFAA7A500B21E59 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABD12AFAA7A500B21E59 /* AppRouter.swift */; };
 		4A6CABD52AFAA91F00B21E59 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABD42AFAA91F00B21E59 /* Endpoint.swift */; };
-		4A6CABD82AFAAA0500B21E59 /* GetProdutcRootCategoriesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABD72AFAAA0500B21E59 /* GetProdutcRootCategoriesClient.swift */; };
+		4A6CABD82AFAAA0500B21E59 /* GetProductRootCategoriesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABD72AFAAA0500B21E59 /* GetProductRootCategoriesClient.swift */; };
 		4A6CABDB2AFAAA5900B21E59 /* BaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABDA2AFAAA5900B21E59 /* BaseClient.swift */; };
 		4A6CABDD2AFAAA9700B21E59 /* ClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABDC2AFAAA9700B21E59 /* ClientProtocol.swift */; };
 		4A6CABDF2AFAAAC200B21E59 /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABDE2AFAAAC200B21E59 /* HTTPService.swift */; };
@@ -86,7 +86,7 @@
 		4A6CABCF2AFAA6D400B21E59 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		4A6CABD12AFAA7A500B21E59 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		4A6CABD42AFAA91F00B21E59 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		4A6CABD72AFAAA0500B21E59 /* GetProdutcRootCategoriesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProdutcRootCategoriesClient.swift; sourceTree = "<group>"; };
+		4A6CABD72AFAAA0500B21E59 /* GetProductRootCategoriesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductRootCategoriesClient.swift; sourceTree = "<group>"; };
 		4A6CABDA2AFAAA5900B21E59 /* BaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseClient.swift; sourceTree = "<group>"; };
 		4A6CABDC2AFAAA9700B21E59 /* ClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProtocol.swift; sourceTree = "<group>"; };
 		4A6CABDE2AFAAAC200B21E59 /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 		4A6CABD62AFAA97600B21E59 /* Clients */ = {
 			isa = PBXGroup;
 			children = (
-				4A6CABD72AFAAA0500B21E59 /* GetProdutcRootCategoriesClient.swift */,
+				4A6CABD72AFAAA0500B21E59 /* GetProductRootCategoriesClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -424,7 +424,7 @@
 				4A28644B2AF9A09F003B4943 /* BaseCoordinatorParent.swift in Sources */,
 				4A4A07652AF98B7C0081C066 /* UIApplication+KeyWindow.swift in Sources */,
 				4A4A072D2AF934240081C066 /* AppDelegate.swift in Sources */,
-				4A6CABD82AFAAA0500B21E59 /* GetProdutcRootCategoriesClient.swift in Sources */,
+				4A6CABD82AFAAA0500B21E59 /* GetProductRootCategoriesClient.swift in Sources */,
 				4A4A075E2AF989F40081C066 /* String+Constants.swift in Sources */,
 				4A2864462AF994E9003B4943 /* UIApplication+TopMostViewController.swift in Sources */,
 				4A4A07472AF984210081C066 /* SplashPresenter.swift in Sources */,

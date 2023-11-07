@@ -28,7 +28,7 @@ extension AppRouter: Endpoint {
     // MARK: - Path
     var path: String {
         switch self {
-        case .GetProductRootCategories: return "/api/auth/register"
+        case .GetProductRootCategories: return "/categories"
         }
     }
 
