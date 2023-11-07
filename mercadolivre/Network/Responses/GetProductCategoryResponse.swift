@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct ProductCategoryResponse: Codable {
+struct GetProductCategoryResponse: Codable {
     let productRootCategories: [ProductRootCategory]
 }

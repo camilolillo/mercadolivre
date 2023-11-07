@@ -18,7 +18,7 @@
 		4A2864552AF9A2DB003B4943 /* UIViewController+isPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2864542AF9A2DB003B4943 /* UIViewController+isPresenting.swift */; };
 		4A2864582AF9AA5A003B4943 /* StatusBarStyleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2864572AF9AA5A003B4943 /* StatusBarStyleNavigationController.swift */; };
 		4A35EAC22AFA9D6C000F199F /* ProductRootCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A35EAC12AFA9D6C000F199F /* ProductRootCategory.swift */; };
-		4A35EAC62AFAA033000F199F /* ProductCategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A35EAC52AFAA033000F199F /* ProductCategoryResponse.swift */; };
+		4A35EAC62AFAA033000F199F /* GetProductCategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A35EAC52AFAA033000F199F /* GetProductCategoryResponse.swift */; };
 		4A4A072D2AF934240081C066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A072C2AF934240081C066 /* AppDelegate.swift */; };
 		4A4A07362AF934250081C066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4A07352AF934250081C066 /* Assets.xcassets */; };
 		4A4A07472AF984210081C066 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A07412AF984210081C066 /* SplashPresenter.swift */; };
@@ -42,6 +42,10 @@
 		4A6CABD02AFAA6D400B21E59 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABCF2AFAA6D400B21E59 /* AppEnvironment.swift */; };
 		4A6CABD22AFAA7A500B21E59 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABD12AFAA7A500B21E59 /* AppRouter.swift */; };
 		4A6CABD52AFAA91F00B21E59 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABD42AFAA91F00B21E59 /* Endpoint.swift */; };
+		4A6CABD82AFAAA0500B21E59 /* GetProdutcRootCategoriesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABD72AFAAA0500B21E59 /* GetProdutcRootCategoriesClient.swift */; };
+		4A6CABDB2AFAAA5900B21E59 /* BaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABDA2AFAAA5900B21E59 /* BaseClient.swift */; };
+		4A6CABDD2AFAAA9700B21E59 /* ClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABDC2AFAAA9700B21E59 /* ClientProtocol.swift */; };
+		4A6CABDF2AFAAAC200B21E59 /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABDE2AFAAAC200B21E59 /* HTTPService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +60,7 @@
 		4A2864542AF9A2DB003B4943 /* UIViewController+isPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+isPresenting.swift"; sourceTree = "<group>"; };
 		4A2864572AF9AA5A003B4943 /* StatusBarStyleNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarStyleNavigationController.swift; sourceTree = "<group>"; };
 		4A35EAC12AFA9D6C000F199F /* ProductRootCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRootCategory.swift; sourceTree = "<group>"; };
-		4A35EAC52AFAA033000F199F /* ProductCategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryResponse.swift; sourceTree = "<group>"; };
+		4A35EAC52AFAA033000F199F /* GetProductCategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductCategoryResponse.swift; sourceTree = "<group>"; };
 		4A4A07292AF934240081C066 /* mercadolivre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mercadolivre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4A072C2AF934240081C066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A4A07352AF934250081C066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +86,10 @@
 		4A6CABCF2AFAA6D400B21E59 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		4A6CABD12AFAA7A500B21E59 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		4A6CABD42AFAA91F00B21E59 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		4A6CABD72AFAAA0500B21E59 /* GetProdutcRootCategoriesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProdutcRootCategoriesClient.swift; sourceTree = "<group>"; };
+		4A6CABDA2AFAAA5900B21E59 /* BaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseClient.swift; sourceTree = "<group>"; };
+		4A6CABDC2AFAAA9700B21E59 /* ClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProtocol.swift; sourceTree = "<group>"; };
+		4A6CABDE2AFAAAC200B21E59 /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
 		6F9F0029AE5B709256D8A982 /* Pods-mercadolivre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mercadolivre.release.xcconfig"; path = "Target Support Files/Pods-mercadolivre/Pods-mercadolivre.release.xcconfig"; sourceTree = "<group>"; };
 		B93967E54EC0DE7B9D747241 /* Pods_mercadolivre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mercadolivre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -125,10 +133,11 @@
 		4A35EAC32AFA9FFE000F199F /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				4A6CABD62AFAA97600B21E59 /* Clients */,
-				4A35EAC42AFAA012000F199F /* Responses */,
 				4A6CABCF2AFAA6D400B21E59 /* AppEnvironment.swift */,
 				4A6CABD12AFAA7A500B21E59 /* AppRouter.swift */,
+				4A6CABDE2AFAAAC200B21E59 /* HTTPService.swift */,
+				4A6CABD62AFAA97600B21E59 /* Clients */,
+				4A35EAC42AFAA012000F199F /* Responses */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -136,7 +145,7 @@
 		4A35EAC42AFAA012000F199F /* Responses */ = {
 			isa = PBXGroup;
 			children = (
-				4A35EAC52AFAA033000F199F /* ProductCategoryResponse.swift */,
+				4A35EAC52AFAA033000F199F /* GetProductCategoryResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -197,6 +206,7 @@
 		4A4A074E2AF984E10081C066 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4A6CABDA2AFAAA5900B21E59 /* BaseClient.swift */,
 				4A4A07562AF985F80081C066 /* TypeAliasses.swift */,
 				4A4A074F2AF984E60081C066 /* Architecture */,
 				4A4A075C2AF989D90081C066 /* Extensions */,
@@ -227,6 +237,7 @@
 				4A4A075A2AF986D60081C066 /* GoBackRequestable.swift */,
 				4A4A07662AF98C7D0081C066 /* ViewLifecycleable.swift */,
 				4A6CABD42AFAA91F00B21E59 /* Endpoint.swift */,
+				4A6CABDC2AFAAA9700B21E59 /* ClientProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -258,6 +269,7 @@
 		4A6CABD62AFAA97600B21E59 /* Clients */ = {
 			isa = PBXGroup;
 			children = (
+				4A6CABD72AFAAA0500B21E59 /* GetProdutcRootCategoriesClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -394,7 +406,7 @@
 			files = (
 				4A4A076E2AF98E500081C066 /* Optional+IsNill.swift in Sources */,
 				4A2864532AF9A292003B4943 /* UIViewController+DismissPresentedViewController.swift in Sources */,
-				4A35EAC62AFAA033000F199F /* ProductCategoryResponse.swift in Sources */,
+				4A35EAC62AFAA033000F199F /* GetProductCategoryResponse.swift in Sources */,
 				4A2864552AF9A2DB003B4943 /* UIViewController+isPresenting.swift in Sources */,
 				4A4A07612AF98A5D0081C066 /* AlertPresentable.swift in Sources */,
 				4A4A07492AF984210081C066 /* SplashProtocols.swift in Sources */,
@@ -408,12 +420,15 @@
 				4A28644F2AF9A148003B4943 /* BaseCoordinator.swift in Sources */,
 				4A4A076A2AF98CF50081C066 /* BaseViewController.swift in Sources */,
 				4A4A074B2AF984210081C066 /* SplashWireframe.swift in Sources */,
+				4A6CABDB2AFAAA5900B21E59 /* BaseClient.swift in Sources */,
 				4A28644B2AF9A09F003B4943 /* BaseCoordinatorParent.swift in Sources */,
 				4A4A07652AF98B7C0081C066 /* UIApplication+KeyWindow.swift in Sources */,
 				4A4A072D2AF934240081C066 /* AppDelegate.swift in Sources */,
+				4A6CABD82AFAAA0500B21E59 /* GetProdutcRootCategoriesClient.swift in Sources */,
 				4A4A075E2AF989F40081C066 /* String+Constants.swift in Sources */,
 				4A2864462AF994E9003B4943 /* UIApplication+TopMostViewController.swift in Sources */,
 				4A4A07472AF984210081C066 /* SplashPresenter.swift in Sources */,
+				4A6CABDD2AFAAA9700B21E59 /* ClientProtocol.swift in Sources */,
 				4A4A07632AF98B320081C066 /* UIViewController+TopMostViewController.swift in Sources */,
 				4A6CABD02AFAA6D400B21E59 /* AppEnvironment.swift in Sources */,
 				4A4A07592AF986750081C066 /* DismissRequestable.swift in Sources */,
@@ -422,6 +437,7 @@
 				4A4A07482AF984210081C066 /* SplashViewController.swift in Sources */,
 				4A4A07572AF985F80081C066 /* TypeAliasses.swift in Sources */,
 				4A2864582AF9AA5A003B4943 /* StatusBarStyleNavigationController.swift in Sources */,
+				4A6CABDF2AFAAAC200B21E59 /* HTTPService.swift in Sources */,
 				4A4A07672AF98C7D0081C066 /* ViewLifecycleable.swift in Sources */,
 				4A6CABD52AFAA91F00B21E59 /* Endpoint.swift in Sources */,
 				4A4A07512AF9850A0081C066 /* BaseModuleDelegate.swift in Sources */,
