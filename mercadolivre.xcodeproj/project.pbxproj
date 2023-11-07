@@ -16,6 +16,8 @@
 		4A2864532AF9A292003B4943 /* UIViewController+DismissPresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2864522AF9A292003B4943 /* UIViewController+DismissPresentedViewController.swift */; };
 		4A2864552AF9A2DB003B4943 /* UIViewController+isPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2864542AF9A2DB003B4943 /* UIViewController+isPresenting.swift */; };
 		4A2864582AF9AA5A003B4943 /* StatusBarStyleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2864572AF9AA5A003B4943 /* StatusBarStyleNavigationController.swift */; };
+		4A35EAC22AFA9D6C000F199F /* ProductRootCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A35EAC12AFA9D6C000F199F /* ProductRootCategory.swift */; };
+		4A35EAC62AFAA033000F199F /* ProductCategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A35EAC52AFAA033000F199F /* ProductCategoryResponse.swift */; };
 		4A4A072D2AF934240081C066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A072C2AF934240081C066 /* AppDelegate.swift */; };
 		4A4A07362AF934250081C066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4A07352AF934250081C066 /* Assets.xcassets */; };
 		4A4A07472AF984210081C066 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A07412AF984210081C066 /* SplashPresenter.swift */; };
@@ -48,6 +50,8 @@
 		4A2864522AF9A292003B4943 /* UIViewController+DismissPresentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DismissPresentedViewController.swift"; sourceTree = "<group>"; };
 		4A2864542AF9A2DB003B4943 /* UIViewController+isPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+isPresenting.swift"; sourceTree = "<group>"; };
 		4A2864572AF9AA5A003B4943 /* StatusBarStyleNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarStyleNavigationController.swift; sourceTree = "<group>"; };
+		4A35EAC12AFA9D6C000F199F /* ProductRootCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRootCategory.swift; sourceTree = "<group>"; };
+		4A35EAC52AFAA033000F199F /* ProductCategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryResponse.swift; sourceTree = "<group>"; };
 		4A4A07292AF934240081C066 /* mercadolivre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mercadolivre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4A072C2AF934240081C066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A4A07352AF934250081C066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +103,30 @@
 			path = NavigationController;
 			sourceTree = "<group>";
 		};
+		4A35EAC02AFA9D2C000F199F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A35EAC12AFA9D6C000F199F /* ProductRootCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A35EAC32AFA9FFE000F199F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4A35EAC42AFAA012000F199F /* Responses */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4A35EAC42AFAA012000F199F /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				4A35EAC52AFAA033000F199F /* ProductCategoryResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
 		4A4A07202AF934240081C066 = {
 			isa = PBXGroup;
 			children = (
@@ -118,12 +146,14 @@
 		4A4A072B2AF934240081C066 /* mercadolivre */ = {
 			isa = PBXGroup;
 			children = (
-				4A2864472AF99F7D003B4943 /* Coordinators */,
-				4A4A074E2AF984E10081C066 /* Common */,
-				4A4A074C2AF9842C0081C066 /* Modules */,
+				4A4A073A2AF934250081C066 /* Info.plist */,
 				4A4A072C2AF934240081C066 /* AppDelegate.swift */,
 				4A4A07352AF934250081C066 /* Assets.xcassets */,
-				4A4A073A2AF934250081C066 /* Info.plist */,
+				4A4A074E2AF984E10081C066 /* Common */,
+				4A2864472AF99F7D003B4943 /* Coordinators */,
+				4A35EAC02AFA9D2C000F199F /* Model */,
+				4A4A074C2AF9842C0081C066 /* Modules */,
+				4A35EAC32AFA9FFE000F199F /* Network */,
 			);
 			path = mercadolivre;
 			sourceTree = "<group>";
@@ -279,6 +309,7 @@
 			files = (
 				4A4A076E2AF98E500081C066 /* Optional+IsNill.swift in Sources */,
 				4A2864532AF9A292003B4943 /* UIViewController+DismissPresentedViewController.swift in Sources */,
+				4A35EAC62AFAA033000F199F /* ProductCategoryResponse.swift in Sources */,
 				4A2864552AF9A2DB003B4943 /* UIViewController+isPresenting.swift in Sources */,
 				4A4A07612AF98A5D0081C066 /* AlertPresentable.swift in Sources */,
 				4A4A07492AF984210081C066 /* SplashProtocols.swift in Sources */,
@@ -286,6 +317,7 @@
 				4A4A075B2AF986D60081C066 /* GoBackRequestable.swift in Sources */,
 				4A2864512AF9A212003B4943 /* Array+Coordinator.swift in Sources */,
 				4A4A076C2AF98E370081C066 /* Optional+isNotNill.swift in Sources */,
+				4A35EAC22AFA9D6C000F199F /* ProductRootCategory.swift in Sources */,
 				4A2864492AF99F8F003B4943 /* AppCoordinator.swift in Sources */,
 				4A28644F2AF9A148003B4943 /* BaseCoordinator.swift in Sources */,
 				4A4A076A2AF98CF50081C066 /* BaseViewController.swift in Sources */,
