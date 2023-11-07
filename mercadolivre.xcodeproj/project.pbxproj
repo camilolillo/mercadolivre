@@ -46,6 +46,16 @@
 		4A6CABDB2AFAAA5900B21E59 /* BaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABDA2AFAAA5900B21E59 /* BaseClient.swift */; };
 		4A6CABDD2AFAAA9700B21E59 /* ClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABDC2AFAAA9700B21E59 /* ClientProtocol.swift */; };
 		4A6CABDF2AFAAAC200B21E59 /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABDE2AFAAAC200B21E59 /* HTTPService.swift */; };
+		4A6CABF42AFABBEF00B21E59 /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABEE2AFABBEF00B21E59 /* CategoriesPresenter.swift */; };
+		4A6CABF52AFABBEF00B21E59 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABEF2AFABBEF00B21E59 /* CategoriesViewController.swift */; };
+		4A6CABF62AFABBEF00B21E59 /* CategoriesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABF02AFABBEF00B21E59 /* CategoriesProtocols.swift */; };
+		4A6CABF72AFABBEF00B21E59 /* CategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABF12AFABBEF00B21E59 /* CategoriesInteractor.swift */; };
+		4A6CABF82AFABBEF00B21E59 /* CategoriesWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABF22AFABBEF00B21E59 /* CategoriesWireframe.swift */; };
+		4A6CABFB2AFABD5E00B21E59 /* RequestCategoriesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABFA2AFABD5E00B21E59 /* RequestCategoriesModule.swift */; };
+		4A6CABFD2AFAD3F600B21E59 /* RootCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABFC2AFAD3F600B21E59 /* RootCategoryCell.swift */; };
+		4A6CABFF2AFAD7BB00B21E59 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABFE2AFAD7BB00B21E59 /* DataSource.swift */; };
+		4A6CAC022AFAD86300B21E59 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC012AFAD86300B21E59 /* BaseCell.swift */; };
+		4A6CAC042AFAD8AF00B21E59 /* DataSourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC032AFAD8AF00B21E59 /* DataSourceable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +100,16 @@
 		4A6CABDA2AFAAA5900B21E59 /* BaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseClient.swift; sourceTree = "<group>"; };
 		4A6CABDC2AFAAA9700B21E59 /* ClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProtocol.swift; sourceTree = "<group>"; };
 		4A6CABDE2AFAAAC200B21E59 /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
+		4A6CABEE2AFABBEF00B21E59 /* CategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
+		4A6CABEF2AFABBEF00B21E59 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		4A6CABF02AFABBEF00B21E59 /* CategoriesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesProtocols.swift; sourceTree = "<group>"; };
+		4A6CABF12AFABBEF00B21E59 /* CategoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesInteractor.swift; sourceTree = "<group>"; };
+		4A6CABF22AFABBEF00B21E59 /* CategoriesWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesWireframe.swift; sourceTree = "<group>"; };
+		4A6CABFA2AFABD5E00B21E59 /* RequestCategoriesModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCategoriesModule.swift; sourceTree = "<group>"; };
+		4A6CABFC2AFAD3F600B21E59 /* RootCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCategoryCell.swift; sourceTree = "<group>"; };
+		4A6CABFE2AFAD7BB00B21E59 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		4A6CAC012AFAD86300B21E59 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		4A6CAC032AFAD8AF00B21E59 /* DataSourceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceable.swift; sourceTree = "<group>"; };
 		6F9F0029AE5B709256D8A982 /* Pods-mercadolivre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mercadolivre.release.xcconfig"; path = "Target Support Files/Pods-mercadolivre/Pods-mercadolivre.release.xcconfig"; sourceTree = "<group>"; };
 		B93967E54EC0DE7B9D747241 /* Pods_mercadolivre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mercadolivre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -186,6 +206,8 @@
 		4A4A074C2AF9842C0081C066 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4A6CABF92AFABD3200B21E59 /* ModuleDelegates */,
+				4A6CABEC2AFABBCA00B21E59 /* Categories */,
 				4A4A074D2AF984320081C066 /* Splash */,
 			);
 			path = Modules;
@@ -206,6 +228,7 @@
 		4A4A074E2AF984E10081C066 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4A6CAC002AFAD82400B21E59 /* Views */,
 				4A6CABDA2AFAAA5900B21E59 /* BaseClient.swift */,
 				4A4A07562AF985F80081C066 /* TypeAliasses.swift */,
 				4A4A074F2AF984E60081C066 /* Architecture */,
@@ -233,11 +256,13 @@
 			children = (
 				4A4A07602AF98A5D0081C066 /* AlertPresentable.swift */,
 				4A4A07532AF9856E0081C066 /* AlertRequestable.swift */,
+				4A6CABDC2AFAAA9700B21E59 /* ClientProtocol.swift */,
+				4A6CABFE2AFAD7BB00B21E59 /* DataSource.swift */,
+				4A6CAC032AFAD8AF00B21E59 /* DataSourceable.swift */,
 				4A4A07582AF986750081C066 /* DismissRequestable.swift */,
+				4A6CABD42AFAA91F00B21E59 /* Endpoint.swift */,
 				4A4A075A2AF986D60081C066 /* GoBackRequestable.swift */,
 				4A4A07662AF98C7D0081C066 /* ViewLifecycleable.swift */,
-				4A6CABD42AFAA91F00B21E59 /* Endpoint.swift */,
-				4A6CABDC2AFAAA9700B21E59 /* ClientProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -272,6 +297,35 @@
 				4A6CABD72AFAAA0500B21E59 /* GetProductRootCategoriesClient.swift */,
 			);
 			path = Clients;
+			sourceTree = "<group>";
+		};
+		4A6CABEC2AFABBCA00B21E59 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4A6CABF12AFABBEF00B21E59 /* CategoriesInteractor.swift */,
+				4A6CABEE2AFABBEF00B21E59 /* CategoriesPresenter.swift */,
+				4A6CABF02AFABBEF00B21E59 /* CategoriesProtocols.swift */,
+				4A6CABEF2AFABBEF00B21E59 /* CategoriesViewController.swift */,
+				4A6CABF22AFABBEF00B21E59 /* CategoriesWireframe.swift */,
+				4A6CABFC2AFAD3F600B21E59 /* RootCategoryCell.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		4A6CABF92AFABD3200B21E59 /* ModuleDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				4A6CABFA2AFABD5E00B21E59 /* RequestCategoriesModule.swift */,
+			);
+			path = ModuleDelegates;
+			sourceTree = "<group>";
+		};
+		4A6CAC002AFAD82400B21E59 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4A6CAC012AFAD86300B21E59 /* BaseCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		5FDCED34DA14ED37758A6589 /* Frameworks */ = {
@@ -407,27 +461,36 @@
 				4A4A076E2AF98E500081C066 /* Optional+IsNill.swift in Sources */,
 				4A2864532AF9A292003B4943 /* UIViewController+DismissPresentedViewController.swift in Sources */,
 				4A35EAC62AFAA033000F199F /* GetProductCategoryResponse.swift in Sources */,
+				4A6CABFF2AFAD7BB00B21E59 /* DataSource.swift in Sources */,
 				4A2864552AF9A2DB003B4943 /* UIViewController+isPresenting.swift in Sources */,
 				4A4A07612AF98A5D0081C066 /* AlertPresentable.swift in Sources */,
 				4A4A07492AF984210081C066 /* SplashProtocols.swift in Sources */,
 				4A4A074A2AF984210081C066 /* SplashInteractor.swift in Sources */,
+				4A6CABF62AFABBEF00B21E59 /* CategoriesProtocols.swift in Sources */,
+				4A6CABF82AFABBEF00B21E59 /* CategoriesWireframe.swift in Sources */,
 				4A4A075B2AF986D60081C066 /* GoBackRequestable.swift in Sources */,
 				4A2864512AF9A212003B4943 /* Array+Coordinator.swift in Sources */,
+				4A6CABFD2AFAD3F600B21E59 /* RootCategoryCell.swift in Sources */,
 				4A4A076C2AF98E370081C066 /* Optional+isNotNill.swift in Sources */,
+				4A6CAC042AFAD8AF00B21E59 /* DataSourceable.swift in Sources */,
 				4A35EAC22AFA9D6C000F199F /* ProductRootCategory.swift in Sources */,
 				4A2864492AF99F8F003B4943 /* AppCoordinator.swift in Sources */,
 				4A6CABD22AFAA7A500B21E59 /* AppRouter.swift in Sources */,
 				4A28644F2AF9A148003B4943 /* BaseCoordinator.swift in Sources */,
 				4A4A076A2AF98CF50081C066 /* BaseViewController.swift in Sources */,
 				4A4A074B2AF984210081C066 /* SplashWireframe.swift in Sources */,
+				4A6CABF72AFABBEF00B21E59 /* CategoriesInteractor.swift in Sources */,
 				4A6CABDB2AFAAA5900B21E59 /* BaseClient.swift in Sources */,
 				4A28644B2AF9A09F003B4943 /* BaseCoordinatorParent.swift in Sources */,
 				4A4A07652AF98B7C0081C066 /* UIApplication+KeyWindow.swift in Sources */,
+				4A6CABFB2AFABD5E00B21E59 /* RequestCategoriesModule.swift in Sources */,
 				4A4A072D2AF934240081C066 /* AppDelegate.swift in Sources */,
+				4A6CAC022AFAD86300B21E59 /* BaseCell.swift in Sources */,
 				4A6CABD82AFAAA0500B21E59 /* GetProductRootCategoriesClient.swift in Sources */,
 				4A4A075E2AF989F40081C066 /* String+Constants.swift in Sources */,
 				4A2864462AF994E9003B4943 /* UIApplication+TopMostViewController.swift in Sources */,
 				4A4A07472AF984210081C066 /* SplashPresenter.swift in Sources */,
+				4A6CABF42AFABBEF00B21E59 /* CategoriesPresenter.swift in Sources */,
 				4A6CABDD2AFAAA9700B21E59 /* ClientProtocol.swift in Sources */,
 				4A4A07632AF98B320081C066 /* UIViewController+TopMostViewController.swift in Sources */,
 				4A6CABD02AFAA6D400B21E59 /* AppEnvironment.swift in Sources */,
@@ -441,6 +504,7 @@
 				4A4A07672AF98C7D0081C066 /* ViewLifecycleable.swift in Sources */,
 				4A6CABD52AFAA91F00B21E59 /* Endpoint.swift in Sources */,
 				4A4A07512AF9850A0081C066 /* BaseModuleDelegate.swift in Sources */,
+				4A6CABF52AFABBEF00B21E59 /* CategoriesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

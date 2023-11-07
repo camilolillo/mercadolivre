@@ -6,7 +6,7 @@
 import UIKit
 
 // MARK: - SplashDelegate
-typealias SplashDelegate = BaseModuleDelegate
+typealias SplashDelegate = BaseModuleDelegate & CategoriesModuleRequestable
 
 
 // MARK: - SplashWireframe

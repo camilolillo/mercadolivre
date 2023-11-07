@@ -11,6 +11,6 @@ import Foundation
 enum AppEnvironment { }
 
 extension AppEnvironment {
-    static var baseURLAsString: String { "https://api.mercadolibre.com/sites/MLC" }
+    static var baseURLAsString: String { "https://api.mercadolibre.com/" }
     static var baseURL: URL? { .init(string: baseURLAsString) }
 }

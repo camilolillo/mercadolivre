@@ -14,3 +14,10 @@ final class AppCoordinator: BaseCoordinator {
     }
     
 }
+
+extension AppCoordinator: CategoriesModuleRequestable {
+    func onCategoriesModuleRequested() {
+        let vc = CategoriesWireframe.createModule(with: self)
+        navigationController.pushViewController(vc, animated: true)
+    }
+}
