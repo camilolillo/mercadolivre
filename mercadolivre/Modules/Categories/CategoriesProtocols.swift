@@ -3,6 +3,8 @@
 //  mercadolivre
 //
 
+import UIKit
+
 enum ViewStatus {
     case loading
     case loaded
@@ -22,4 +24,6 @@ protocol CategoriesInteractorProtocol: AnyObject {
 
 
 // MARK: - Presenter
-protocol CategoriesPresenterProtocol: ViewLifecycleable, CollectionViewable {}
+protocol CategoriesPresenterProtocol: ViewLifecycleable, CollectionViewable {
+    func onItemSelected(indexPath: IndexPath)
+}

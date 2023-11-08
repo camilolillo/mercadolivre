@@ -3,6 +3,8 @@
 //  mercadolivre
 //
 
+import UIKit
+
 // MARK: - CategoriesPresenter
 final class CategoriesPresenter {
     weak var view: CategoriesViewProtocol?
@@ -49,5 +51,11 @@ extension CategoriesPresenter: CollectionViewable {
     }
     func onSizeForItem(in section: Int, at index: Int) -> (width: Double, height: Double) {
         return (width: view!.screenWidth-24, height: 58)
+    }
+    func onItemSelected(indexPath: IndexPath) {
+        guard let rootCategory = dataSource?[indexPath.row] as? ProductRootCategory else {
+            return
+        }
+        print(rootCategory.id)
     }
 }

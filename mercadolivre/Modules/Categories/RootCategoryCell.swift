@@ -31,5 +31,10 @@ final class RootCategoryCell: DataSourceableCell {
     override func setupCell() {
         contentView.backgroundColor = .white
         contentView.layer.cornerRadius = 12
+        contentView.addSubview(title)
+        NSLayoutConstraint.activate([
+            title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            title.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        ])
     }
 }

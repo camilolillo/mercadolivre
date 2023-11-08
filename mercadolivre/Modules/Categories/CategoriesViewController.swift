@@ -20,8 +20,8 @@ final class CategoriesViewController: BaseViewController {
         collectionView.delegate = self
         collectionView.register(RootCategoryCell.self)
         collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = .yellow
         collectionView.showsVerticalScrollIndicator = false
-        collectionView.backgroundColor = .red
         return collectionView
     }()
     
@@ -39,8 +39,7 @@ extension CategoriesViewController {
         super.viewDidLoad()
         presenter?.onViewDidLoad()
         title = "Categorías"
-        view.backgroundColor = .white
-        self.navigationController?.navigationBar.topItem?.titleView = collectionView
+        view.backgroundColor = .yellow
         setupNavigationBar()
         
         view.addSubview(collectionView)
@@ -56,6 +55,10 @@ extension CategoriesViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter?.onViewWillAppear()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
     }
 }
 //MARK: - Methods
@@ -111,7 +114,7 @@ extension CategoriesViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //TODO
+        presenter?.onItemSelected(indexPath: indexPath)
     }
 
 }
