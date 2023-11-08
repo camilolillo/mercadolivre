@@ -12,7 +12,7 @@ protocol RootCategoryDataSource: DataSource {
     var title: String { get }
 }
 
-final class NewCell: DataSourceableCell {
+final class RootCategoryCell: DataSourceableCell {
     
     var title: UILabel = {
         let label = UILabel()

@@ -57,6 +57,17 @@
 		4A6CAC022AFAD86300B21E59 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC012AFAD86300B21E59 /* BaseCell.swift */; };
 		4A6CAC042AFAD8AF00B21E59 /* DataSourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC032AFAD8AF00B21E59 /* DataSourceable.swift */; };
 		4A6CAC082AFBC7F900B21E59 /* GetRootCategoriesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC072AFBC7F900B21E59 /* GetRootCategoriesResult.swift */; };
+		4A6CAC0A2AFBDA1A00B21E59 /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC092AFBDA1A00B21E59 /* UICollectionView+Register.swift */; };
+		4A6CAC0C2AFBDA5C00B21E59 /* Withable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC0B2AFBDA5C00B21E59 /* Withable.swift */; };
+		4A6CAC0E2AFBDA9800B21E59 /* Stringable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC0D2AFBDA9800B21E59 /* Stringable.swift */; };
+		4A6CAC102AFBDB1500B21E59 /* UICollectionReusableView+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC0F2AFBDB1500B21E59 /* UICollectionReusableView+ReuseIdentifier.swift */; };
+		4A6CAC122AFBDBC100B21E59 /* CollectionViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC112AFBDBC100B21E59 /* CollectionViewable.swift */; };
+		4A6CAC142AFBDBEF00B21E59 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC132AFBDBEF00B21E59 /* CollectionViewDataSource.swift */; };
+		4A6CAC162AFBDC4F00B21E59 /* CollectionViewDelegateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC152AFBDC4F00B21E59 /* CollectionViewDelegateable.swift */; };
+		4A6CAC182AFBDC7500B21E59 /* CollectionViewSizeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC172AFBDC7500B21E59 /* CollectionViewSizeable.swift */; };
+		4A6CAC1A2AFBDF4400B21E59 /* ScreenSizeMeasurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC192AFBDF4400B21E59 /* ScreenSizeMeasurable.swift */; };
+		4A6CAC1C2AFBDFC600B21E59 /* UIViewController+ScreenWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC1B2AFBDFC600B21E59 /* UIViewController+ScreenWidth.swift */; };
+		4A6CAC1E2AFBDFF700B21E59 /* UIViewController+ScreenHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC1D2AFBDFF700B21E59 /* UIViewController+ScreenHeight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +123,17 @@
 		4A6CAC012AFAD86300B21E59 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		4A6CAC032AFAD8AF00B21E59 /* DataSourceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceable.swift; sourceTree = "<group>"; };
 		4A6CAC072AFBC7F900B21E59 /* GetRootCategoriesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRootCategoriesResult.swift; sourceTree = "<group>"; };
+		4A6CAC092AFBDA1A00B21E59 /* UICollectionView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift"; sourceTree = "<group>"; };
+		4A6CAC0B2AFBDA5C00B21E59 /* Withable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Withable.swift; sourceTree = "<group>"; };
+		4A6CAC0D2AFBDA9800B21E59 /* Stringable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stringable.swift; sourceTree = "<group>"; };
+		4A6CAC0F2AFBDB1500B21E59 /* UICollectionReusableView+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+ReuseIdentifier.swift"; sourceTree = "<group>"; };
+		4A6CAC112AFBDBC100B21E59 /* CollectionViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewable.swift; sourceTree = "<group>"; };
+		4A6CAC132AFBDBEF00B21E59 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
+		4A6CAC152AFBDC4F00B21E59 /* CollectionViewDelegateable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDelegateable.swift; sourceTree = "<group>"; };
+		4A6CAC172AFBDC7500B21E59 /* CollectionViewSizeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSizeable.swift; sourceTree = "<group>"; };
+		4A6CAC192AFBDF4400B21E59 /* ScreenSizeMeasurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeMeasurable.swift; sourceTree = "<group>"; };
+		4A6CAC1B2AFBDFC600B21E59 /* UIViewController+ScreenWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenWidth.swift"; sourceTree = "<group>"; };
+		4A6CAC1D2AFBDFF700B21E59 /* UIViewController+ScreenHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenHeight.swift"; sourceTree = "<group>"; };
 		6F9F0029AE5B709256D8A982 /* Pods-mercadolivre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mercadolivre.release.xcconfig"; path = "Target Support Files/Pods-mercadolivre/Pods-mercadolivre.release.xcconfig"; sourceTree = "<group>"; };
 		B93967E54EC0DE7B9D747241 /* Pods_mercadolivre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mercadolivre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -260,12 +282,19 @@
 				4A4A07602AF98A5D0081C066 /* AlertPresentable.swift */,
 				4A4A07532AF9856E0081C066 /* AlertRequestable.swift */,
 				4A6CABDC2AFAAA9700B21E59 /* ClientProtocol.swift */,
+				4A6CAC112AFBDBC100B21E59 /* CollectionViewable.swift */,
+				4A6CAC132AFBDBEF00B21E59 /* CollectionViewDataSource.swift */,
+				4A6CAC152AFBDC4F00B21E59 /* CollectionViewDelegateable.swift */,
+				4A6CAC172AFBDC7500B21E59 /* CollectionViewSizeable.swift */,
 				4A6CABFE2AFAD7BB00B21E59 /* DataSource.swift */,
 				4A6CAC032AFAD8AF00B21E59 /* DataSourceable.swift */,
 				4A4A07582AF986750081C066 /* DismissRequestable.swift */,
 				4A6CABD42AFAA91F00B21E59 /* Endpoint.swift */,
 				4A4A075A2AF986D60081C066 /* GoBackRequestable.swift */,
+				4A6CAC0D2AFBDA9800B21E59 /* Stringable.swift */,
 				4A4A07662AF98C7D0081C066 /* ViewLifecycleable.swift */,
+				4A6CAC0B2AFBDA5C00B21E59 /* Withable.swift */,
+				4A6CAC192AFBDF4400B21E59 /* ScreenSizeMeasurable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -279,8 +308,12 @@
 				4A4A075D2AF989F40081C066 /* String+Constants.swift */,
 				4A4A07642AF98B7C0081C066 /* UIApplication+KeyWindow.swift */,
 				4A2864452AF994E9003B4943 /* UIApplication+TopMostViewController.swift */,
+				4A6CAC0F2AFBDB1500B21E59 /* UICollectionReusableView+ReuseIdentifier.swift */,
+				4A6CAC092AFBDA1A00B21E59 /* UICollectionView+Register.swift */,
 				4A2864522AF9A292003B4943 /* UIViewController+DismissPresentedViewController.swift */,
 				4A2864542AF9A2DB003B4943 /* UIViewController+isPresenting.swift */,
+				4A6CAC1D2AFBDFF700B21E59 /* UIViewController+ScreenHeight.swift */,
+				4A6CAC1B2AFBDFC600B21E59 /* UIViewController+ScreenWidth.swift */,
 				4A4A07622AF98B320081C066 /* UIViewController+TopMostViewController.swift */,
 			);
 			path = Extensions;
@@ -472,16 +505,22 @@
 				4A4A076E2AF98E500081C066 /* Optional+IsNill.swift in Sources */,
 				4A2864532AF9A292003B4943 /* UIViewController+DismissPresentedViewController.swift in Sources */,
 				4A35EAC62AFAA033000F199F /* GetProductCategoryResponse.swift in Sources */,
+				4A6CAC1C2AFBDFC600B21E59 /* UIViewController+ScreenWidth.swift in Sources */,
 				4A6CABFF2AFAD7BB00B21E59 /* DataSource.swift in Sources */,
 				4A2864552AF9A2DB003B4943 /* UIViewController+isPresenting.swift in Sources */,
+				4A6CAC162AFBDC4F00B21E59 /* CollectionViewDelegateable.swift in Sources */,
 				4A4A07612AF98A5D0081C066 /* AlertPresentable.swift in Sources */,
 				4A4A07492AF984210081C066 /* SplashProtocols.swift in Sources */,
 				4A4A074A2AF984210081C066 /* SplashInteractor.swift in Sources */,
 				4A6CABF62AFABBEF00B21E59 /* CategoriesProtocols.swift in Sources */,
 				4A6CABF82AFABBEF00B21E59 /* CategoriesWireframe.swift in Sources */,
+				4A6CAC122AFBDBC100B21E59 /* CollectionViewable.swift in Sources */,
 				4A4A075B2AF986D60081C066 /* GoBackRequestable.swift in Sources */,
+				4A6CAC182AFBDC7500B21E59 /* CollectionViewSizeable.swift in Sources */,
 				4A2864512AF9A212003B4943 /* Array+Coordinator.swift in Sources */,
+				4A6CAC1A2AFBDF4400B21E59 /* ScreenSizeMeasurable.swift in Sources */,
 				4A6CABFD2AFAD3F600B21E59 /* RootCategoryCell.swift in Sources */,
+				4A6CAC0C2AFBDA5C00B21E59 /* Withable.swift in Sources */,
 				4A4A076C2AF98E370081C066 /* Optional+isNotNill.swift in Sources */,
 				4A6CAC042AFAD8AF00B21E59 /* DataSourceable.swift in Sources */,
 				4A35EAC22AFA9D6C000F199F /* ProductRootCategory.swift in Sources */,
@@ -498,9 +537,12 @@
 				4A4A072D2AF934240081C066 /* AppDelegate.swift in Sources */,
 				4A6CAC022AFAD86300B21E59 /* BaseCell.swift in Sources */,
 				4A6CABD82AFAAA0500B21E59 /* GetProductRootCategoriesClient.swift in Sources */,
+				4A6CAC1E2AFBDFF700B21E59 /* UIViewController+ScreenHeight.swift in Sources */,
 				4A4A075E2AF989F40081C066 /* String+Constants.swift in Sources */,
 				4A2864462AF994E9003B4943 /* UIApplication+TopMostViewController.swift in Sources */,
+				4A6CAC0E2AFBDA9800B21E59 /* Stringable.swift in Sources */,
 				4A4A07472AF984210081C066 /* SplashPresenter.swift in Sources */,
+				4A6CAC0A2AFBDA1A00B21E59 /* UICollectionView+Register.swift in Sources */,
 				4A6CABF42AFABBEF00B21E59 /* CategoriesPresenter.swift in Sources */,
 				4A6CABDD2AFAAA9700B21E59 /* ClientProtocol.swift in Sources */,
 				4A4A07632AF98B320081C066 /* UIViewController+TopMostViewController.swift in Sources */,
@@ -511,8 +553,10 @@
 				4A6CAC082AFBC7F900B21E59 /* GetRootCategoriesResult.swift in Sources */,
 				4A4A07482AF984210081C066 /* SplashViewController.swift in Sources */,
 				4A4A07572AF985F80081C066 /* TypeAliasses.swift in Sources */,
+				4A6CAC102AFBDB1500B21E59 /* UICollectionReusableView+ReuseIdentifier.swift in Sources */,
 				4A2864582AF9AA5A003B4943 /* StatusBarStyleNavigationController.swift in Sources */,
 				4A6CABDF2AFAAAC200B21E59 /* HTTPService.swift in Sources */,
+				4A6CAC142AFBDBEF00B21E59 /* CollectionViewDataSource.swift in Sources */,
 				4A4A07672AF98C7D0081C066 /* ViewLifecycleable.swift in Sources */,
 				4A6CABD52AFAA91F00B21E59 /* Endpoint.swift in Sources */,
 				4A4A07512AF9850A0081C066 /* BaseModuleDelegate.swift in Sources */,

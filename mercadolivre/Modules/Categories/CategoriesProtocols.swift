@@ -9,8 +9,9 @@ enum ViewStatus {
 }
 
 // MARK: - View
-protocol CategoriesViewProtocol: AnyObject {
+protocol CategoriesViewProtocol: ScreenSizeMeasurable {
     func set(viewStatus: ViewStatus)
+    func reloadData()
 }
 
 
@@ -21,4 +22,4 @@ protocol CategoriesInteractorProtocol: AnyObject {
 
 
 // MARK: - Presenter
-protocol CategoriesPresenterProtocol: ViewLifecycleable {}
+protocol CategoriesPresenterProtocol: ViewLifecycleable, CollectionViewable {}
