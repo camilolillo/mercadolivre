@@ -17,11 +17,11 @@ extension CategoriesInteractor: CategoriesInteractorProtocol {
         categoriesClient.getProductRootCategories() { result in
             switch result {
             case .success(let response):
-                guard !response.productRootCategories.isEmpty else {
+                guard !response.isEmpty else {
                     handler(GetRootCategoriesResult(message: .noRootCategoriesMessage))
                     return
                 }
-                handler(GetRootCategoriesResult(message: "Success", rootCategories: response.productRootCategories))
+                handler(GetRootCategoriesResult(message: "Success", rootCategories: response))
             case .failure(let error):
                 print(error)
                 handler(GetRootCategoriesResult(message: .defaultAlertMessage))

@@ -8,13 +8,13 @@
 import Foundation
 
 protocol GetProductRootCategoriesClientProtocol: AnyObject {
-    func getProductRootCategories(with result: @escaping ResultHandler<GetProductCategoryResponse>)
+    func getProductRootCategories(with result: @escaping ResultHandler<[ProductRootCategory]>)
 }
 
 final class GetProductRootCategoriesClient: BaseClient { }
 
 extension GetProductRootCategoriesClient: GetProductRootCategoriesClientProtocol {
-    func getProductRootCategories(with result: @escaping ResultHandler<GetProductCategoryResponse>) {
+    func getProductRootCategories(with result: @escaping ResultHandler<[ProductRootCategory]>) {
         request(resource: AppRouter.GetProductRootCategories, result: result)
     }
 }
