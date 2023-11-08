@@ -10,24 +10,33 @@ final class ChildrenCategoriesPresenter {
     weak var view: ChildrenCategoriesViewProtocol?
     var interactor: ChildrenCategoriesInteractorProtocol?
     weak var delegate: ChildrenCategoriesDelegate?
+    
+    private var dataSource: [CategoryCellDataSource]? {
+        didSet {
+            view?.reloadData()
+        }
+    }
 }
 
 // MARK: - ChildrenCategoriesPresenterProtocol
 extension ChildrenCategoriesPresenter: ChildrenCategoriesPresenterProtocol {
     func onItemSelected(indexPath: IndexPath) {
-        <#code#>
+        guard let rootCategory = dataSource?[indexPath.row] as? ChildrenCategory else {
+            return
+        }
+        print(rootCategory.id)
     }
     func getNumberOfItems(in section: Int) -> Int {
-        <#code#>
+        return dataSource?.count ?? 0
     }
     func onCellForItem(in section: Int, at index: Int) -> DataSource? {
-        <#code#>
+        return dataSource?[index]
     }
     func onReuseIdentifierRequested(in section: Int, at index: Int) -> String {
-        <#code#>
+        return ChildrenCategoryCell.reuseIdentifier
     }
     func onSizeForItem(in section: Int, at index: Int) -> (width: Double, height: Double) {
-        <#code#>
+        return (width: view!.screenWidth-24, height: 58)
     }
 }
 

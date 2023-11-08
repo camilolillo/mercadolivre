@@ -14,7 +14,9 @@ enum ChildrenCategoriesWireframe {
     static func createModule(with delegate: ChildrenCategoriesDelegate) -> UIViewController {
         let view = ChildrenCategoriesViewController()
         let presenter = ChildrenCategoriesPresenter()
-        let interactor = ChildrenCategoriesInteractor()
+        let interactor = ChildrenCategoriesInteractor(
+            getChildrenCategoriesClient: GetChildrenCategoriesClient()
+        )
 
         view.presenter = presenter
 

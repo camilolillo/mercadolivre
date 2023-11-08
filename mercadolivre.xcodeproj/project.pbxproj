@@ -77,6 +77,7 @@
 		4A6CAC4A2AFC15CD00B21E59 /* GetChildrenCategoriesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC492AFC15CD00B21E59 /* GetChildrenCategoriesClient.swift */; };
 		4A6CAC4E2AFC1C4E00B21E59 /* GetChildrenCategoriesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC4D2AFC1C4E00B21E59 /* GetChildrenCategoriesResult.swift */; };
 		4A6CAC502AFC1E4500B21E59 /* GetChildrenCategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC4F2AFC1E4500B21E59 /* GetChildrenCategoriesResponse.swift */; };
+		4A6CAC542AFC2C8800B21E59 /* ChildrenCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC532AFC2C8800B21E59 /* ChildrenCategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +153,7 @@
 		4A6CAC492AFC15CD00B21E59 /* GetChildrenCategoriesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChildrenCategoriesClient.swift; sourceTree = "<group>"; };
 		4A6CAC4D2AFC1C4E00B21E59 /* GetChildrenCategoriesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChildrenCategoriesResult.swift; sourceTree = "<group>"; };
 		4A6CAC4F2AFC1E4500B21E59 /* GetChildrenCategoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChildrenCategoriesResponse.swift; sourceTree = "<group>"; };
+		4A6CAC532AFC2C8800B21E59 /* ChildrenCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenCategoryCell.swift; sourceTree = "<group>"; };
 		6F9F0029AE5B709256D8A982 /* Pods-mercadolivre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mercadolivre.release.xcconfig"; path = "Target Support Files/Pods-mercadolivre/Pods-mercadolivre.release.xcconfig"; sourceTree = "<group>"; };
 		B93967E54EC0DE7B9D747241 /* Pods_mercadolivre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mercadolivre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -403,6 +405,7 @@
 				4A6CAC322AFC130E00B21E59 /* ChildrenCategoriesProtocols.swift */,
 				4A6CAC312AFC130E00B21E59 /* ChildrenCategoriesViewController.swift */,
 				4A6CAC342AFC130E00B21E59 /* ChildrenCategoriesWireframe.swift */,
+				4A6CAC532AFC2C8800B21E59 /* ChildrenCategoryCell.swift */,
 			);
 			path = ChildrenCategories;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				4A6CAC102AFBDB1500B21E59 /* UICollectionReusableView+ReuseIdentifier.swift in Sources */,
 				4A2864582AF9AA5A003B4943 /* StatusBarStyleNavigationController.swift in Sources */,
 				4A6CABDF2AFAAAC200B21E59 /* HTTPService.swift in Sources */,
+				4A6CAC542AFC2C8800B21E59 /* ChildrenCategoryCell.swift in Sources */,
 				4A6CAC142AFBDBEF00B21E59 /* CollectionViewDataSource.swift in Sources */,
 				4A4A07672AF98C7D0081C066 /* ViewLifecycleable.swift in Sources */,
 				4A6CABD52AFAA91F00B21E59 /* Endpoint.swift in Sources */,

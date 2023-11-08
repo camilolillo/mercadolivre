@@ -8,13 +8,13 @@
 import Foundation
 
 protocol GetChildrenCategoriesClientProtocol: AnyObject {
-    func getChildrenCategories(with childrenCategoryId: String, result: @escaping ResultHandler<[ChildrenCategory]>)
+    func getChildrenCategories(with childrenCategoryId: String, result: @escaping ResultHandler<GetChildrenCategoriesResponse>)
 }
 
 final class GetChildrenCategoriesClient: BaseClient { }
 
 extension GetChildrenCategoriesClient: GetChildrenCategoriesClientProtocol {
-    func getChildrenCategories(with childrenCategoryId: String, result: @escaping ResultHandler<[ChildrenCategory]>) {
+    func getChildrenCategories(with childrenCategoryId: String, result: @escaping ResultHandler<GetChildrenCategoriesResponse>) {
         request(resource: AppRouter.GetChildrenCategories(childrenCategoryId), result: result)
     }
 }
