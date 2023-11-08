@@ -188,7 +188,6 @@
 				4A6CAC1F2AFC0B6C00B21E59 /* ChildrenCategory.swift */,
 				4A35EAC12AFA9D6C000F199F /* RootCategory.swift */,
 				4A6CAC062AFBC7DE00B21E59 /* Handlers */,
-				4A6CAC4B2AFC15E600B21E59 /* Parameters */,
 				4A35EAC42AFAA012000F199F /* Responses */,
 			);
 			path = Model;
@@ -403,13 +402,6 @@
 				4A6CAC342AFC130E00B21E59 /* ChildrenCategoriesWireframe.swift */,
 			);
 			path = ChildrenCategories;
-			sourceTree = "<group>";
-		};
-		4A6CAC4B2AFC15E600B21E59 /* Parameters */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Parameters;
 			sourceTree = "<group>";
 		};
 		5FDCED34DA14ED37758A6589 /* Frameworks */ = {

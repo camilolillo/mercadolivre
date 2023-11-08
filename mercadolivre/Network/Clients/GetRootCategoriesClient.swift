@@ -15,6 +15,6 @@ final class GetRootCategoriesClient: BaseClient { }
 
 extension GetRootCategoriesClient: GetRootCategoriesClientProtocol {
     func getProductRootCategories(with result: @escaping ResultHandler<[RootCategory]>) {
-        request(resource: AppRouter.GetProductRootCategories, result: result)
+        request(resource: AppRouter.GetRootCategories, result: result)
     }
 }
