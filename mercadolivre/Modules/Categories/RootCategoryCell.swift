@@ -8,17 +8,23 @@
 import Foundation
 import UIKit
 
-protocol NewItemCellDataSource: DataSource {
-    var imageUrl: String? { get }
-    var text: String? { get }
-    var title: String? { get }
+protocol RootCategoryDataSource: DataSource {
+    var title: String { get }
 }
 
 final class NewCell: DataSourceableCell {
+    
+    var title: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 14)
+        return label
+    }()
         
-    var dataSource: NewItemCellDataSource? {
+    var dataSource: RootCategoryDataSource? {
         didSet {
-            
+            guard let dataSource else { return }
+            title.text = dataSource.title
         }
     }
     

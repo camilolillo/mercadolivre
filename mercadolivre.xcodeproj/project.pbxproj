@@ -56,6 +56,7 @@
 		4A6CABFF2AFAD7BB00B21E59 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABFE2AFAD7BB00B21E59 /* DataSource.swift */; };
 		4A6CAC022AFAD86300B21E59 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC012AFAD86300B21E59 /* BaseCell.swift */; };
 		4A6CAC042AFAD8AF00B21E59 /* DataSourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC032AFAD8AF00B21E59 /* DataSourceable.swift */; };
+		4A6CAC082AFBC7F900B21E59 /* GetRootCategoriesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC072AFBC7F900B21E59 /* GetRootCategoriesResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,7 @@
 		4A6CABFE2AFAD7BB00B21E59 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		4A6CAC012AFAD86300B21E59 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		4A6CAC032AFAD8AF00B21E59 /* DataSourceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceable.swift; sourceTree = "<group>"; };
+		4A6CAC072AFBC7F900B21E59 /* GetRootCategoriesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRootCategoriesResult.swift; sourceTree = "<group>"; };
 		6F9F0029AE5B709256D8A982 /* Pods-mercadolivre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mercadolivre.release.xcconfig"; path = "Target Support Files/Pods-mercadolivre/Pods-mercadolivre.release.xcconfig"; sourceTree = "<group>"; };
 		B93967E54EC0DE7B9D747241 /* Pods_mercadolivre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mercadolivre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -145,7 +147,9 @@
 		4A35EAC02AFA9D2C000F199F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4A6CAC062AFBC7DE00B21E59 /* Handlers */,
 				4A35EAC12AFA9D6C000F199F /* ProductRootCategory.swift */,
+				4A35EAC42AFAA012000F199F /* Responses */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,7 +161,6 @@
 				4A6CABD12AFAA7A500B21E59 /* AppRouter.swift */,
 				4A6CABDE2AFAAAC200B21E59 /* HTTPService.swift */,
 				4A6CABD62AFAA97600B21E59 /* Clients */,
-				4A35EAC42AFAA012000F199F /* Responses */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				4A4A074E2AF984E10081C066 /* Common */,
 				4A2864472AF99F7D003B4943 /* Coordinators */,
 				4A35EAC02AFA9D2C000F199F /* Model */,
+				4A6CABF92AFABD3200B21E59 /* ModuleDelegates */,
 				4A4A074C2AF9842C0081C066 /* Modules */,
 				4A35EAC32AFA9FFE000F199F /* Network */,
 			);
@@ -206,7 +210,6 @@
 		4A4A074C2AF9842C0081C066 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				4A6CABF92AFABD3200B21E59 /* ModuleDelegates */,
 				4A6CABEC2AFABBCA00B21E59 /* Categories */,
 				4A4A074D2AF984320081C066 /* Splash */,
 			);
@@ -228,7 +231,6 @@
 		4A4A074E2AF984E10081C066 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				4A6CAC002AFAD82400B21E59 /* Views */,
 				4A6CABDA2AFAAA5900B21E59 /* BaseClient.swift */,
 				4A4A07562AF985F80081C066 /* TypeAliasses.swift */,
 				4A4A074F2AF984E60081C066 /* Architecture */,
@@ -236,6 +238,7 @@
 				4A2864562AF9AA43003B4943 /* NavigationController */,
 				4A4A07522AF9855C0081C066 /* Protocols */,
 				4A4A07682AF98CDE0081C066 /* ViewControllers */,
+				4A6CAC002AFAD82400B21E59 /* Views */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -326,6 +329,14 @@
 				4A6CAC012AFAD86300B21E59 /* BaseCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4A6CAC062AFBC7DE00B21E59 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				4A6CAC072AFBC7F900B21E59 /* GetRootCategoriesResult.swift */,
+			);
+			path = Handlers;
 			sourceTree = "<group>";
 		};
 		5FDCED34DA14ED37758A6589 /* Frameworks */ = {
@@ -497,6 +508,7 @@
 				4A4A07592AF986750081C066 /* DismissRequestable.swift in Sources */,
 				4A28644D2AF9A0C0003B4943 /* Coordinator.swift in Sources */,
 				4A4A07542AF9856E0081C066 /* AlertRequestable.swift in Sources */,
+				4A6CAC082AFBC7F900B21E59 /* GetRootCategoriesResult.swift in Sources */,
 				4A4A07482AF984210081C066 /* SplashViewController.swift in Sources */,
 				4A4A07572AF985F80081C066 /* TypeAliasses.swift in Sources */,
 				4A2864582AF9AA5A003B4943 /* StatusBarStyleNavigationController.swift in Sources */,

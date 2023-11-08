@@ -16,6 +16,10 @@ extension CategoriesPresenter: CategoriesPresenterProtocol {}
 
 // MARK: - ViewLifecycleable
 extension CategoriesPresenter: ViewLifecycleable {
-    func onViewDidLoad() {}
+    func onViewDidLoad() {
+        interactor?.requestRootCategories() { result in
+            print(result)
+        }
+    }
     func onViewWillAppear() {}
 }

@@ -33,4 +33,8 @@ extension CategoriesViewController {
 }
 
 // MARK: - CategoriesViewProtocol
-extension CategoriesViewController: CategoriesViewProtocol {}
+extension CategoriesViewController: CategoriesViewProtocol {
+    func set(viewStatus: ViewStatus) {
+        //TODO
+    }
+}

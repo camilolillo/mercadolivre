@@ -12,3 +12,8 @@ struct ProductRootCategory: Codable {
     var name: String
 }
 
+extension ProductRootCategory: RootCategoryDataSource {
+    var title: String {
+        return name
+    }
+}
