@@ -5,8 +5,8 @@
 
 // MARK: - CategoriesInteractor
 final class RootCategoriesInteractor {
-    private let categoriesClient: GetProductRootCategoriesClientProtocol
-    init(categoriesClient: GetProductRootCategoriesClientProtocol) {
+    private let categoriesClient: GetRootCategoriesClientProtocol
+    init(categoriesClient: GetRootCategoriesClientProtocol) {
         self.categoriesClient = categoriesClient
     }
 }

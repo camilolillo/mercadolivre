@@ -42,7 +42,7 @@
 		4A6CABD02AFAA6D400B21E59 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABCF2AFAA6D400B21E59 /* AppEnvironment.swift */; };
 		4A6CABD22AFAA7A500B21E59 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABD12AFAA7A500B21E59 /* AppRouter.swift */; };
 		4A6CABD52AFAA91F00B21E59 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABD42AFAA91F00B21E59 /* Endpoint.swift */; };
-		4A6CABD82AFAAA0500B21E59 /* GetProductRootCategoriesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABD72AFAAA0500B21E59 /* GetProductRootCategoriesClient.swift */; };
+		4A6CABD82AFAAA0500B21E59 /* GetRootCategoriesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABD72AFAAA0500B21E59 /* GetRootCategoriesClient.swift */; };
 		4A6CABDB2AFAAA5900B21E59 /* BaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABDA2AFAAA5900B21E59 /* BaseClient.swift */; };
 		4A6CABDD2AFAAA9700B21E59 /* ClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABDC2AFAAA9700B21E59 /* ClientProtocol.swift */; };
 		4A6CABDF2AFAAAC200B21E59 /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABDE2AFAAAC200B21E59 /* HTTPService.swift */; };
@@ -51,7 +51,7 @@
 		4A6CABF62AFABBEF00B21E59 /* RootCategoriesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABF02AFABBEF00B21E59 /* RootCategoriesProtocols.swift */; };
 		4A6CABF72AFABBEF00B21E59 /* RootCategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABF12AFABBEF00B21E59 /* RootCategoriesInteractor.swift */; };
 		4A6CABF82AFABBEF00B21E59 /* RootCategoriesWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABF22AFABBEF00B21E59 /* RootCategoriesWireframe.swift */; };
-		4A6CABFB2AFABD5E00B21E59 /* RequestCategoriesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABFA2AFABD5E00B21E59 /* RequestCategoriesModule.swift */; };
+		4A6CABFB2AFABD5E00B21E59 /* RootCategoriesModuleRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABFA2AFABD5E00B21E59 /* RootCategoriesModuleRequestable.swift */; };
 		4A6CABFD2AFAD3F600B21E59 /* RootCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABFC2AFAD3F600B21E59 /* RootCategoryCell.swift */; };
 		4A6CABFF2AFAD7BB00B21E59 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CABFE2AFAD7BB00B21E59 /* DataSource.swift */; };
 		4A6CAC022AFAD86300B21E59 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC012AFAD86300B21E59 /* BaseCell.swift */; };
@@ -69,6 +69,13 @@
 		4A6CAC1C2AFBDFC600B21E59 /* UIViewController+ScreenWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC1B2AFBDFC600B21E59 /* UIViewController+ScreenWidth.swift */; };
 		4A6CAC1E2AFBDFF700B21E59 /* UIViewController+ScreenHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC1D2AFBDFF700B21E59 /* UIViewController+ScreenHeight.swift */; };
 		4A6CAC202AFC0B6C00B21E59 /* ChildrenCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC1F2AFC0B6C00B21E59 /* ChildrenCategory.swift */; };
+		4A6CAC362AFC130E00B21E59 /* ChildrenCategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC302AFC130E00B21E59 /* ChildrenCategoriesPresenter.swift */; };
+		4A6CAC372AFC130E00B21E59 /* ChildrenCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC312AFC130E00B21E59 /* ChildrenCategoriesViewController.swift */; };
+		4A6CAC382AFC130E00B21E59 /* ChildrenCategoriesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC322AFC130E00B21E59 /* ChildrenCategoriesProtocols.swift */; };
+		4A6CAC392AFC130E00B21E59 /* ChildrenCategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC332AFC130E00B21E59 /* ChildrenCategoriesInteractor.swift */; };
+		4A6CAC3A2AFC130E00B21E59 /* ChildrenCategoriesWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC342AFC130E00B21E59 /* ChildrenCategoriesWireframe.swift */; };
+		4A6CAC482AFC139900B21E59 /* ChildrenCategoriesModuleRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC472AFC139900B21E59 /* ChildrenCategoriesModuleRequestable.swift */; };
+		4A6CAC4A2AFC15CD00B21E59 /* GetChildrenCategoriesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC492AFC15CD00B21E59 /* GetChildrenCategoriesClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,7 +116,7 @@
 		4A6CABCF2AFAA6D400B21E59 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		4A6CABD12AFAA7A500B21E59 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		4A6CABD42AFAA91F00B21E59 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		4A6CABD72AFAAA0500B21E59 /* GetProductRootCategoriesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductRootCategoriesClient.swift; sourceTree = "<group>"; };
+		4A6CABD72AFAAA0500B21E59 /* GetRootCategoriesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRootCategoriesClient.swift; sourceTree = "<group>"; };
 		4A6CABDA2AFAAA5900B21E59 /* BaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseClient.swift; sourceTree = "<group>"; };
 		4A6CABDC2AFAAA9700B21E59 /* ClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProtocol.swift; sourceTree = "<group>"; };
 		4A6CABDE2AFAAAC200B21E59 /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
@@ -118,7 +125,7 @@
 		4A6CABF02AFABBEF00B21E59 /* RootCategoriesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCategoriesProtocols.swift; sourceTree = "<group>"; };
 		4A6CABF12AFABBEF00B21E59 /* RootCategoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCategoriesInteractor.swift; sourceTree = "<group>"; };
 		4A6CABF22AFABBEF00B21E59 /* RootCategoriesWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCategoriesWireframe.swift; sourceTree = "<group>"; };
-		4A6CABFA2AFABD5E00B21E59 /* RequestCategoriesModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCategoriesModule.swift; sourceTree = "<group>"; };
+		4A6CABFA2AFABD5E00B21E59 /* RootCategoriesModuleRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCategoriesModuleRequestable.swift; sourceTree = "<group>"; };
 		4A6CABFC2AFAD3F600B21E59 /* RootCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCategoryCell.swift; sourceTree = "<group>"; };
 		4A6CABFE2AFAD7BB00B21E59 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		4A6CAC012AFAD86300B21E59 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
@@ -136,6 +143,13 @@
 		4A6CAC1B2AFBDFC600B21E59 /* UIViewController+ScreenWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenWidth.swift"; sourceTree = "<group>"; };
 		4A6CAC1D2AFBDFF700B21E59 /* UIViewController+ScreenHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenHeight.swift"; sourceTree = "<group>"; };
 		4A6CAC1F2AFC0B6C00B21E59 /* ChildrenCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenCategory.swift; sourceTree = "<group>"; };
+		4A6CAC302AFC130E00B21E59 /* ChildrenCategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenCategoriesPresenter.swift; sourceTree = "<group>"; };
+		4A6CAC312AFC130E00B21E59 /* ChildrenCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenCategoriesViewController.swift; sourceTree = "<group>"; };
+		4A6CAC322AFC130E00B21E59 /* ChildrenCategoriesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenCategoriesProtocols.swift; sourceTree = "<group>"; };
+		4A6CAC332AFC130E00B21E59 /* ChildrenCategoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenCategoriesInteractor.swift; sourceTree = "<group>"; };
+		4A6CAC342AFC130E00B21E59 /* ChildrenCategoriesWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenCategoriesWireframe.swift; sourceTree = "<group>"; };
+		4A6CAC472AFC139900B21E59 /* ChildrenCategoriesModuleRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenCategoriesModuleRequestable.swift; sourceTree = "<group>"; };
+		4A6CAC492AFC15CD00B21E59 /* GetChildrenCategoriesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChildrenCategoriesClient.swift; sourceTree = "<group>"; };
 		6F9F0029AE5B709256D8A982 /* Pods-mercadolivre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mercadolivre.release.xcconfig"; path = "Target Support Files/Pods-mercadolivre/Pods-mercadolivre.release.xcconfig"; sourceTree = "<group>"; };
 		B93967E54EC0DE7B9D747241 /* Pods_mercadolivre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mercadolivre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -171,9 +185,10 @@
 		4A35EAC02AFA9D2C000F199F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4A35EAC12AFA9D6C000F199F /* RootCategory.swift */,
 				4A6CAC1F2AFC0B6C00B21E59 /* ChildrenCategory.swift */,
+				4A35EAC12AFA9D6C000F199F /* RootCategory.swift */,
 				4A6CAC062AFBC7DE00B21E59 /* Handlers */,
+				4A6CAC4B2AFC15E600B21E59 /* Parameters */,
 				4A35EAC42AFAA012000F199F /* Responses */,
 			);
 			path = Model;
@@ -235,6 +250,7 @@
 		4A4A074C2AF9842C0081C066 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4A6CAC2E2AFC12F200B21E59 /* ChildrenCategories */,
 				4A6CABEC2AFABBCA00B21E59 /* RootCategories */,
 				4A4A074D2AF984320081C066 /* Splash */,
 			);
@@ -333,7 +349,8 @@
 		4A6CABD62AFAA97600B21E59 /* Clients */ = {
 			isa = PBXGroup;
 			children = (
-				4A6CABD72AFAAA0500B21E59 /* GetProductRootCategoriesClient.swift */,
+				4A6CAC492AFC15CD00B21E59 /* GetChildrenCategoriesClient.swift */,
+				4A6CABD72AFAAA0500B21E59 /* GetRootCategoriesClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -354,7 +371,8 @@
 		4A6CABF92AFABD3200B21E59 /* ModuleDelegates */ = {
 			isa = PBXGroup;
 			children = (
-				4A6CABFA2AFABD5E00B21E59 /* RequestCategoriesModule.swift */,
+				4A6CAC472AFC139900B21E59 /* ChildrenCategoriesModuleRequestable.swift */,
+				4A6CABFA2AFABD5E00B21E59 /* RootCategoriesModuleRequestable.swift */,
 			);
 			path = ModuleDelegates;
 			sourceTree = "<group>";
@@ -373,6 +391,25 @@
 				4A6CAC072AFBC7F900B21E59 /* GetRootCategoriesResult.swift */,
 			);
 			path = Handlers;
+			sourceTree = "<group>";
+		};
+		4A6CAC2E2AFC12F200B21E59 /* ChildrenCategories */ = {
+			isa = PBXGroup;
+			children = (
+				4A6CAC332AFC130E00B21E59 /* ChildrenCategoriesInteractor.swift */,
+				4A6CAC302AFC130E00B21E59 /* ChildrenCategoriesPresenter.swift */,
+				4A6CAC322AFC130E00B21E59 /* ChildrenCategoriesProtocols.swift */,
+				4A6CAC312AFC130E00B21E59 /* ChildrenCategoriesViewController.swift */,
+				4A6CAC342AFC130E00B21E59 /* ChildrenCategoriesWireframe.swift */,
+			);
+			path = ChildrenCategories;
+			sourceTree = "<group>";
+		};
+		4A6CAC4B2AFC15E600B21E59 /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Parameters;
 			sourceTree = "<group>";
 		};
 		5FDCED34DA14ED37758A6589 /* Frameworks */ = {
@@ -521,6 +558,7 @@
 				4A6CAC122AFBDBC100B21E59 /* CollectionViewable.swift in Sources */,
 				4A4A075B2AF986D60081C066 /* GoBackRequestable.swift in Sources */,
 				4A6CAC182AFBDC7500B21E59 /* CollectionViewSizeable.swift in Sources */,
+				4A6CAC382AFC130E00B21E59 /* ChildrenCategoriesProtocols.swift in Sources */,
 				4A2864512AF9A212003B4943 /* Array+Coordinator.swift in Sources */,
 				4A6CAC1A2AFBDF4400B21E59 /* ScreenSizeMeasurable.swift in Sources */,
 				4A6CABFD2AFAD3F600B21E59 /* RootCategoryCell.swift in Sources */,
@@ -537,13 +575,16 @@
 				4A6CABDB2AFAAA5900B21E59 /* BaseClient.swift in Sources */,
 				4A28644B2AF9A09F003B4943 /* BaseCoordinatorParent.swift in Sources */,
 				4A4A07652AF98B7C0081C066 /* UIApplication+KeyWindow.swift in Sources */,
-				4A6CABFB2AFABD5E00B21E59 /* RequestCategoriesModule.swift in Sources */,
+				4A6CABFB2AFABD5E00B21E59 /* RootCategoriesModuleRequestable.swift in Sources */,
 				4A4A072D2AF934240081C066 /* AppDelegate.swift in Sources */,
+				4A6CAC392AFC130E00B21E59 /* ChildrenCategoriesInteractor.swift in Sources */,
 				4A6CAC022AFAD86300B21E59 /* BaseCell.swift in Sources */,
-				4A6CABD82AFAAA0500B21E59 /* GetProductRootCategoriesClient.swift in Sources */,
+				4A6CABD82AFAAA0500B21E59 /* GetRootCategoriesClient.swift in Sources */,
 				4A6CAC1E2AFBDFF700B21E59 /* UIViewController+ScreenHeight.swift in Sources */,
 				4A4A075E2AF989F40081C066 /* String+Constants.swift in Sources */,
+				4A6CAC482AFC139900B21E59 /* ChildrenCategoriesModuleRequestable.swift in Sources */,
 				4A2864462AF994E9003B4943 /* UIApplication+TopMostViewController.swift in Sources */,
+				4A6CAC372AFC130E00B21E59 /* ChildrenCategoriesViewController.swift in Sources */,
 				4A6CAC0E2AFBDA9800B21E59 /* Stringable.swift in Sources */,
 				4A4A07472AF984210081C066 /* SplashPresenter.swift in Sources */,
 				4A6CAC0A2AFBDA1A00B21E59 /* UICollectionView+Register.swift in Sources */,
@@ -555,6 +596,7 @@
 				4A28644D2AF9A0C0003B4943 /* Coordinator.swift in Sources */,
 				4A4A07542AF9856E0081C066 /* AlertRequestable.swift in Sources */,
 				4A6CAC082AFBC7F900B21E59 /* GetRootCategoriesResult.swift in Sources */,
+				4A6CAC362AFC130E00B21E59 /* ChildrenCategoriesPresenter.swift in Sources */,
 				4A4A07482AF984210081C066 /* SplashViewController.swift in Sources */,
 				4A4A07572AF985F80081C066 /* TypeAliasses.swift in Sources */,
 				4A6CAC102AFBDB1500B21E59 /* UICollectionReusableView+ReuseIdentifier.swift in Sources */,
@@ -563,6 +605,8 @@
 				4A6CAC142AFBDBEF00B21E59 /* CollectionViewDataSource.swift in Sources */,
 				4A4A07672AF98C7D0081C066 /* ViewLifecycleable.swift in Sources */,
 				4A6CABD52AFAA91F00B21E59 /* Endpoint.swift in Sources */,
+				4A6CAC4A2AFC15CD00B21E59 /* GetChildrenCategoriesClient.swift in Sources */,
+				4A6CAC3A2AFC130E00B21E59 /* ChildrenCategoriesWireframe.swift in Sources */,
 				4A4A07512AF9850A0081C066 /* BaseModuleDelegate.swift in Sources */,
 				4A6CABF52AFABBEF00B21E59 /* RootCategoriesViewController.swift in Sources */,
 			);

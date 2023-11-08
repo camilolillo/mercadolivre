@@ -6,7 +6,7 @@
 import UIKit
 
 // MARK: - CategoriesDelegate
-typealias RootCategoriesDelegate = BaseModuleDelegate & CategoriesModuleRequestable
+typealias RootCategoriesDelegate = BaseModuleDelegate & RootCategoriesModuleRequestable
 
 
 // MARK: - CategoriesWireframe
@@ -16,7 +16,7 @@ enum RootCategoriesWireframe {
         let presenter = RootCategoriesPresenter()
         
         let interactor = RootCategoriesInteractor(
-            categoriesClient: GetProductRootCategoriesClient()
+            categoriesClient: GetRootCategoriesClient()
         )
 
         view.presenter = presenter
