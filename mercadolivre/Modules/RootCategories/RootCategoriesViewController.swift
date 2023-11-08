@@ -6,8 +6,8 @@
 import UIKit
 
 // MARK: - CategoriesViewController
-final class CategoriesViewController: BaseViewController {
-    var presenter: CategoriesPresenterProtocol?
+final class RootCategoriesViewController: BaseViewController {
+    var presenter: RootCategoriesPresenterProtocol?
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -34,7 +34,7 @@ final class CategoriesViewController: BaseViewController {
 }
 
 // MARK: - Lifecycle
-extension CategoriesViewController {
+extension RootCategoriesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.onViewDidLoad()
@@ -47,7 +47,7 @@ extension CategoriesViewController {
         NSLayoutConstraint.activate([
             collectionView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             collectionView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            collectionView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
+            collectionView.widthAnchor.constraint(equalTo: view.widthAnchor),
             collectionView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor)
         ])
     }
@@ -62,14 +62,14 @@ extension CategoriesViewController {
     }
 }
 //MARK: - Methods
-extension CategoriesViewController {
+extension RootCategoriesViewController {
     func setupNavigationBar() {
         navigationItem.setHidesBackButton(true, animated: false)
     }
 }
 
 // MARK: - CategoriesViewProtocol
-extension CategoriesViewController: CategoriesViewProtocol {
+extension RootCategoriesViewController: RootCategoriesViewProtocol {
     func set(viewStatus: ViewStatus) {
         //TODO
     }
@@ -79,7 +79,7 @@ extension CategoriesViewController: CategoriesViewProtocol {
 }
 
 // MARK: - UICollectionViewDataSource
-extension CategoriesViewController: UICollectionViewDataSource {
+extension RootCategoriesViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int { presenter?.getNumberOfSections() ?? 0 }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { presenter?.getNumberOfItems(in: section) ?? 0 }
@@ -120,7 +120,7 @@ extension CategoriesViewController: UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
-extension CategoriesViewController: UICollectionViewDelegateFlowLayout {
+extension RootCategoriesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         switch section {
         case presenter?.getNumberOfSections():

@@ -6,12 +6,12 @@
 import UIKit
 
 // MARK: - CategoriesPresenter
-final class CategoriesPresenter {
-    weak var view: CategoriesViewProtocol?
-    var interactor: CategoriesInteractorProtocol?
-    weak var delegate: CategoriesDelegate?
+final class RootCategoriesPresenter {
+    weak var view: RootCategoriesViewProtocol?
+    var interactor: RootCategoriesInteractorProtocol?
+    weak var delegate: RootCategoriesDelegate?
     
-    private var dataSource: [RootCategoryDataSource]? {
+    private var dataSource: [CategoryCellDataSource]? {
         didSet {
             view?.reloadData()
         }
@@ -19,10 +19,10 @@ final class CategoriesPresenter {
 }
 
 // MARK: - CategoriesPresenterProtocol
-extension CategoriesPresenter: CategoriesPresenterProtocol {}
+extension RootCategoriesPresenter: RootCategoriesPresenterProtocol {}
 
 // MARK: - ViewLifecycleable
-extension CategoriesPresenter: ViewLifecycleable {
+extension RootCategoriesPresenter: ViewLifecycleable {
     func onViewDidLoad() {
         interactor?.requestRootCategories() { result in
             guard let data = result.rootCategories else {
@@ -39,7 +39,7 @@ extension CategoriesPresenter: ViewLifecycleable {
     func onViewWillAppear() {}
 }
 //MARK: - CollectionViewable
-extension CategoriesPresenter: CollectionViewable {
+extension RootCategoriesPresenter: CollectionViewable {
     func getNumberOfItems(in section: Int) -> Int {
         return dataSource?.count ?? 0
     }
@@ -53,7 +53,7 @@ extension CategoriesPresenter: CollectionViewable {
         return (width: view!.screenWidth-24, height: 58)
     }
     func onItemSelected(indexPath: IndexPath) {
-        guard let rootCategory = dataSource?[indexPath.row] as? ProductRootCategory else {
+        guard let rootCategory = dataSource?[indexPath.row] as? RootCategory else {
             return
         }
         print(rootCategory.id)

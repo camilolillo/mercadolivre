@@ -9,5 +9,5 @@ import Foundation
 
 struct GetRootCategoriesResult {
     var message: String
-    var rootCategories: [RootCategoryDataSource]?
+    var rootCategories: [CategoryCellDataSource]?
 }

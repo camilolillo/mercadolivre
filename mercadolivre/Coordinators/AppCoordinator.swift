@@ -17,7 +17,7 @@ final class AppCoordinator: BaseCoordinator {
 
 extension AppCoordinator: CategoriesModuleRequestable {
     func onCategoriesModuleRequested() {
-        let vc = CategoriesWireframe.createModule(with: self)
+        let vc = RootCategoriesWireframe.createModule(with: self)
         navigationController.pushViewController(vc, animated: true)
     }
 }

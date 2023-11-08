@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol RootCategoryDataSource: DataSource {
+protocol CategoryCellDataSource: DataSource {
     var title: String { get }
 }
 
@@ -21,7 +21,7 @@ final class RootCategoryCell: DataSourceableCell {
         return label
     }()
         
-    var dataSource: RootCategoryDataSource? {
+    var dataSource: CategoryCellDataSource? {
         didSet {
             guard let dataSource else { return }
             title.text = dataSource.title

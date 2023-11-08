@@ -4,7 +4,7 @@
 //
 
 // MARK: - CategoriesInteractor
-final class CategoriesInteractor {
+final class RootCategoriesInteractor {
     private let categoriesClient: GetProductRootCategoriesClientProtocol
     init(categoriesClient: GetProductRootCategoriesClientProtocol) {
         self.categoriesClient = categoriesClient
@@ -12,7 +12,7 @@ final class CategoriesInteractor {
 }
 
 // MARK: - CategoriesInteractorProtocol
-extension CategoriesInteractor: CategoriesInteractorProtocol {
+extension RootCategoriesInteractor: RootCategoriesInteractorProtocol {
     func requestRootCategories(with handler: @escaping Handler<GetRootCategoriesResult>) {
         categoriesClient.getProductRootCategories() { result in
             switch result {

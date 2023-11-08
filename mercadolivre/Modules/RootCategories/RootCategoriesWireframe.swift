@@ -6,16 +6,16 @@
 import UIKit
 
 // MARK: - CategoriesDelegate
-typealias CategoriesDelegate = BaseModuleDelegate & CategoriesModuleRequestable
+typealias RootCategoriesDelegate = BaseModuleDelegate & CategoriesModuleRequestable
 
 
 // MARK: - CategoriesWireframe
-enum CategoriesWireframe {
-    static func createModule(with delegate: CategoriesDelegate) -> UIViewController {
-        let view = CategoriesViewController()
-        let presenter = CategoriesPresenter()
+enum RootCategoriesWireframe {
+    static func createModule(with delegate: RootCategoriesDelegate) -> UIViewController {
+        let view = RootCategoriesViewController()
+        let presenter = RootCategoriesPresenter()
         
-        let interactor = CategoriesInteractor(
+        let interactor = RootCategoriesInteractor(
             categoriesClient: GetProductRootCategoriesClient()
         )
 

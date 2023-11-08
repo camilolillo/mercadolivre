@@ -8,5 +8,5 @@
 import Foundation
 
 struct GetProductCategoryResponse: Codable {
-    let productRootCategories: [ProductRootCategory]
+    let productRootCategories: [RootCategory]
 }

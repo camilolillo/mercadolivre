@@ -11,19 +11,19 @@ enum ViewStatus {
 }
 
 // MARK: - View
-protocol CategoriesViewProtocol: ScreenSizeMeasurable {
+protocol RootCategoriesViewProtocol: ScreenSizeMeasurable {
     func set(viewStatus: ViewStatus)
     func reloadData()
 }
 
 
 // MARK: - Interactor
-protocol CategoriesInteractorProtocol: AnyObject {
+protocol RootCategoriesInteractorProtocol: AnyObject {
     func requestRootCategories(with handler: @escaping Handler<GetRootCategoriesResult>)
 }
 
 
 // MARK: - Presenter
-protocol CategoriesPresenterProtocol: ViewLifecycleable, CollectionViewable {
+protocol RootCategoriesPresenterProtocol: ViewLifecycleable, CollectionViewable {
     func onItemSelected(indexPath: IndexPath)
 }
