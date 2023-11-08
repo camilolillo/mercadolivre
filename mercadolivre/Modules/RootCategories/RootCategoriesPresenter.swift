@@ -40,6 +40,12 @@ extension RootCategoriesPresenter: ViewLifecycleable {
 }
 //MARK: - CollectionViewable
 extension RootCategoriesPresenter: CollectionViewable {
+    func onItemSelected(indexPath: IndexPath) {
+        guard let rootCategory = dataSource?[indexPath.row] as? RootCategory else {
+            return
+        }
+        delegate?.onChildrenCategoriesModuleRequested(with: rootCategory.id)
+    }
     func getNumberOfItems(in section: Int) -> Int {
         return dataSource?.count ?? 0
     }
@@ -51,11 +57,5 @@ extension RootCategoriesPresenter: CollectionViewable {
     }
     func onSizeForItem(in section: Int, at index: Int) -> (width: Double, height: Double) {
         return (width: view!.screenWidth-24, height: 58)
-    }
-    func onItemSelected(indexPath: IndexPath) {
-        guard let rootCategory = dataSource?[indexPath.row] as? RootCategory else {
-            return
-        }
-        print(rootCategory.id)
     }
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ChildrenCategoriesModuleRequestable: AnyObject {
-    func onChildrenCategoriesModuleRequested()
+    func onChildrenCategoriesModuleRequested(with childrenCategoryId: String)
 }

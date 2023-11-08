@@ -11,11 +11,12 @@ typealias ChildrenCategoriesDelegate = BaseModuleDelegate
 
 // MARK: - ChildrenCategoriesWireframe
 enum ChildrenCategoriesWireframe {
-    static func createModule(with delegate: ChildrenCategoriesDelegate) -> UIViewController {
+    static func createModule(with delegate: ChildrenCategoriesDelegate, childrenCategoryId: String) -> UIViewController {
         let view = ChildrenCategoriesViewController()
         let presenter = ChildrenCategoriesPresenter()
         let interactor = ChildrenCategoriesInteractor(
-            getChildrenCategoriesClient: GetChildrenCategoriesClient()
+            getChildrenCategoriesClient: GetChildrenCategoriesClient(),
+            childrenCategoryId: childrenCategoryId
         )
 
         view.presenter = presenter

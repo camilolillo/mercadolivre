@@ -21,10 +21,10 @@ final class ChildrenCategoriesPresenter {
 // MARK: - ChildrenCategoriesPresenterProtocol
 extension ChildrenCategoriesPresenter: ChildrenCategoriesPresenterProtocol {
     func onItemSelected(indexPath: IndexPath) {
-        guard let rootCategory = dataSource?[indexPath.row] as? ChildrenCategory else {
+        guard let childrenCategory = dataSource?[indexPath.row] as? ChildrenCategory else {
             return
         }
-        print(rootCategory.id)
+        print(childrenCategory)
     }
     func getNumberOfItems(in section: Int) -> Int {
         return dataSource?.count ?? 0
@@ -43,6 +43,10 @@ extension ChildrenCategoriesPresenter: ChildrenCategoriesPresenterProtocol {
 
 // MARK: - ViewLifecycleable
 extension ChildrenCategoriesPresenter: ViewLifecycleable {
-    func onViewDidLoad() {}
+    func onViewDidLoad() {
+        interactor?.requestRootCategories(with: interactor?.getChildrenCategoryId() ?? "") { result in
+            print(result)
+        }
+    }
     func onViewWillAppear() {}
 }

@@ -6,8 +6,10 @@
 // MARK: - ChildrenCategoriesInteractor
 final class ChildrenCategoriesInteractor {
     private let getChildrenCategoriesClient: GetChildrenCategoriesClientProtocol
-    init(getChildrenCategoriesClient: GetChildrenCategoriesClientProtocol) {
+    private let childrenCategoryId: String
+    init(getChildrenCategoriesClient: GetChildrenCategoriesClientProtocol, childrenCategoryId: String) {
         self.getChildrenCategoriesClient = getChildrenCategoriesClient
+        self.childrenCategoryId = childrenCategoryId
     }
 }
 
@@ -35,5 +37,8 @@ extension ChildrenCategoriesInteractor: ChildrenCategoriesInteractorProtocol {
                 handler(failureResult)
             }
         }
+    }
+    func getChildrenCategoryId() -> String {
+        return childrenCategoryId
     }
 }
