@@ -11,7 +11,6 @@ final class CategoriesPresenter {
     
     private var dataSource: [RootCategoryDataSource]? {
         didSet {
-            guard let dataSource else { return }
             view?.reloadData()
         }
     }
@@ -49,6 +48,6 @@ extension CategoriesPresenter: CollectionViewable {
         return RootCategoryCell.reuseIdentifier
     }
     func onSizeForItem(in section: Int, at index: Int) -> (width: Double, height: Double) {
-        return (width: view!.screenWidth-48, height: 58)
+        return (width: view!.screenWidth-24, height: 58)
     }
 }

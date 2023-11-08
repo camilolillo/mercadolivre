@@ -28,4 +28,8 @@ final class RootCategoryCell: DataSourceableCell {
         }
     }
     
+    override func setupCell() {
+        contentView.backgroundColor = .white
+        contentView.layer.cornerRadius = 12
+    }
 }

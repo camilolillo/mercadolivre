@@ -11,17 +11,16 @@ final class CategoriesViewController: BaseViewController {
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
         layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 8
+        layout.minimumInteritemSpacing = 8
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(RootCategoryCell.self)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
-        collectionView.isHidden = true
         collectionView.backgroundColor = .red
         return collectionView
     }()
@@ -41,9 +40,17 @@ extension CategoriesViewController {
         presenter?.onViewDidLoad()
         title = "Categorías"
         view.backgroundColor = .white
+        self.navigationController?.navigationBar.topItem?.titleView = collectionView
         setupNavigationBar()
         
+        view.addSubview(collectionView)
         
+        NSLayoutConstraint.activate([
+            collectionView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            collectionView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            collectionView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
+            collectionView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor)
+        ])
     }
 
     override func viewWillAppear(_ animated: Bool) {
