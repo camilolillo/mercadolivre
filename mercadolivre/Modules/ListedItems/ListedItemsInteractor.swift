@@ -15,8 +15,8 @@ final class ListedItemsInteractor {
 
 // MARK: - ListedItemsInteractorProtocol
 extension ListedItemsInteractor: ListedItemsInteractorProtocol {
-    func requesItemList(with childrenCategoryId: String, handler: @escaping Handler<GetItemListPerChildrenCategoryResult>) {
-        getItemListPerChildrenCategoryClient.getItemList(with: childrenCategoryId) { result in
+    func requesItemList(with parameters: GetItemListPerChildrenCategoryParameters, handler: @escaping Handler<GetItemListPerChildrenCategoryResult>) {
+        getItemListPerChildrenCategoryClient.getItemList(with: parameters) { result in
             print(result)
         }
     }
