@@ -11,7 +11,7 @@ final class ListedItemsPresenter {
     var interactor: ListedItemsInteractorProtocol?
     weak var delegate: ListedItemsDelegate?
 
-    private var dataSource: [ItemCellDataSource]? {
+    private var dataSource: [ListedItemCellDataSource]? {
         didSet {
             view?.reloadData()
         }

@@ -29,7 +29,7 @@ final class ItemCell: DataSourceableCell {
         return view
     }()
         
-    var dataSource: ItemCellDataSource? {
+    var dataSource: ListedItemCellDataSource? {
         didSet {
             guard let dataSource else { return }
             title.text = dataSource.name

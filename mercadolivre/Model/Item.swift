@@ -2,28 +2,17 @@
 //  Item.swift
 //  mercadolivre
 //
-//  Created by Camilo Lillo on 08-11-23.
+//  Created by Camilo Lillo on 09-11-23.
 //
 
 import Foundation
 
-protocol ItemCellDataSource: DataSource {
-    var name: String { get }
-    var imageUrlString: String { get }
-}
+import Foundation
 
 struct Item: Codable {
     var id: String
     var title: String
-    var thumbnail: String?
+    var subtitle: String?
+    var price: Int
+    var pictures: [ItemPicture]
 }
-
-extension Item: ItemCellDataSource {
-    var name: String {
-        return title
-    }
-    var imageUrlString: String {
-        return thumbnail ?? ""
-    }
-}
-

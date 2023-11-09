@@ -8,5 +8,5 @@
 import Foundation
 
 struct GetItemListPerChildrenCategoryResponse: Codable {
-    var results: [Item]
+    var results: [ListedItem]
 }
