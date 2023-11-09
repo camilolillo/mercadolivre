@@ -32,6 +32,15 @@ final class SearchViewController: BaseViewController {
         return button
     }()
     
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.hidesWhenStopped = true
+        view.color = .systemBlue
+        view.stopAnimating()
+        return view
+    }()
+    
     @objc func onSearchButtonPressed(sender: UIButton) {
         presenter?.onSearchButtonPressed(key: searchField.text)
     }
@@ -52,6 +61,7 @@ extension SearchViewController {
         
         view.addSubview(searchField)
         view.addSubview(searchButton)
+        searchButton.addSubview(activityIndicator)
         
         NSLayoutConstraint.activate([
             searchField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
@@ -61,10 +71,23 @@ extension SearchViewController {
             searchButton.widthAnchor.constraint(equalTo: searchField.widthAnchor),
             searchButton.heightAnchor.constraint(equalTo: searchField.heightAnchor),
             searchButton.topAnchor.constraint(equalTo: searchField.bottomAnchor, constant: 12),
-            searchButton.centerXAnchor.constraint(equalTo: searchField.centerXAnchor)
+            searchButton.centerXAnchor.constraint(equalTo: searchField.centerXAnchor),
+            activityIndicator.centerXAnchor.constraint(equalTo: searchButton.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: searchButton.centerYAnchor)
         ])
     }
 }
 
 // MARK: - SearchViewProtocol
-extension SearchViewController: SearchViewProtocol {}
+extension SearchViewController: SearchViewProtocol {
+    func set(loadingStatus: LoadingStatus) {
+        switch loadingStatus {
+        case .loading:
+            searchButton.setTitle("", for: .normal)
+            activityIndicator.startAnimating()
+        case .loaded:
+            activityIndicator.stopAnimating()
+            searchButton.setTitle("Buscar", for: .normal)
+        }
+    }
+}

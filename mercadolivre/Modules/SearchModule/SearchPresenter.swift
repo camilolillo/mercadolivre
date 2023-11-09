@@ -16,15 +16,17 @@ extension SearchPresenter: SearchPresenterProtocol {
         guard !(key?.isEmpty ?? true) else { return }
         guard let key else { return }
         let parameters = SearchParameters(searchKey: key)
+        view?.set(loadingStatus: .loading)
         interactor?.requesItemList(with: parameters) { result in
             guard let data = result.results else {
                 self.delegate?.onPresentAlertRequested(
                     title: "",
                     message: result.message,
-                    handler: nil, cancelHandler: nil
+                    handler: { self.view?.set(loadingStatus: .loaded) }, cancelHandler: nil
                 )
                 return
             }
+            self.view?.set(loadingStatus: .loaded)
             self.delegate?.onSearchedItemListRequested(items: data)
         }
     }

@@ -4,7 +4,9 @@
 //
 
 // MARK: - View
-protocol SearchViewProtocol: AnyObject {}
+protocol SearchViewProtocol: AnyObject {
+    func set(loadingStatus: LoadingStatus)
+}
 
 
 // MARK: - Interactor
