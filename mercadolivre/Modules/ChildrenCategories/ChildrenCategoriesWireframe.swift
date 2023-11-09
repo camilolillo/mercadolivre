@@ -6,7 +6,7 @@
 import UIKit
 
 // MARK: - ChildrenCategoriesDelegate
-typealias ChildrenCategoriesDelegate = BaseModuleDelegate & ItemListPerChildrenCategoryRequestable
+typealias ChildrenCategoriesDelegate = BaseModuleDelegate & ItemListPerChildrenCategoryRequestable & SearchItemRequestable
 
 
 // MARK: - ChildrenCategoriesWireframe

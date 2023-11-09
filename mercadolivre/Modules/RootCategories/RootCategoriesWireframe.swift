@@ -6,7 +6,7 @@
 import UIKit
 
 // MARK: - CategoriesDelegate
-typealias RootCategoriesDelegate = BaseModuleDelegate & ChildrenCategoriesModuleRequestable
+typealias RootCategoriesDelegate = BaseModuleDelegate & ChildrenCategoriesModuleRequestable & SearchItemRequestable
 
 
 // MARK: - CategoriesWireframe

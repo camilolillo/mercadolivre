@@ -5,6 +5,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class AppCoordinator: BaseCoordinator {
     
@@ -33,5 +34,19 @@ extension AppCoordinator: ItemListPerChildrenCategoryRequestable {
     func onItemListRequested(with childrenCategoryId: String) {
         let vc = ListedItemsWireframe.createModule(with: self, childrenCategoryId: childrenCategoryId)
         navigationController.pushViewController(vc, animated: true)
+    }
+}
+
+extension AppCoordinator: SearchItemRequestable {
+    func onSearchItemRequested(with handler: CompletionHandler) {
+        let vc = SearchWireframe.createModule(with: self)
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .pageSheet
+        if #available(iOS 15.0, *) {
+            if let sheet = nav.sheetPresentationController {
+                sheet.detents = [.medium()]
+            }
+        }
+        navigationController.present(nav, animated: true)
     }
 }

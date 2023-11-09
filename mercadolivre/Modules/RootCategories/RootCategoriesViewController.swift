@@ -66,8 +66,22 @@ extension RootCategoriesViewController {
 extension RootCategoriesViewController {
     func setupNavigationBar() {
         navigationItem.setHidesBackButton(true, animated: false)
+        let searchButton = UIBarButtonItem(
+            image: UIImage(systemName: "magnifyingglass"),
+            style: .plain,
+            target: self,
+            action: #selector(onSearchButtonPressed)
+        )
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let activityIndicatorItem = UIBarButtonItem(customView: activityIndicator)
-        navigationItem.rightBarButtonItem = activityIndicatorItem
+        navigationItem.rightBarButtonItems = [activityIndicatorItem, flexibleSpace, searchButton]
+        navigationItem.setHidesBackButton(true, animated: false)
+    }
+}
+//MARK: - Functions
+extension RootCategoriesViewController {
+    @objc func onSearchButtonPressed(sender: UIButton) {
+        presenter?.onSearchButtonPressed()
     }
 }
 // MARK: - CategoriesViewProtocol

@@ -22,4 +22,5 @@ protocol ListedItemsInteractorProtocol: AnyObject {
 protocol ListedItemsPresenterProtocol: ViewLifecycleable, CollectionViewable {
     func onItemSelected(indexPath: IndexPath)
     func onBackButtonPressed()
+    func onSearchButtonPressed()
 }

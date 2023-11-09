@@ -94,14 +94,25 @@ extension ChildrenCategoriesViewController {
             action: #selector(onBackButtonPressed(sender:))
         )
         navigationItem.setLeftBarButton(barButtonItem, animated: false)
+        let searchButton = UIBarButtonItem(
+            image: UIImage(systemName: "magnifyingglass"),
+            style: .plain,
+            target: self,
+            action: #selector(onSearchButtonPressed)
+        )
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let activityIndicatorItem = UIBarButtonItem(customView: activityIndicator)
-        navigationItem.rightBarButtonItem = activityIndicatorItem
+        navigationItem.rightBarButtonItems = [searchButton, flexibleSpace, activityIndicatorItem]
+        navigationItem.setHidesBackButton(true, animated: false)
     }
 }
 //MARK: - Functions
 extension ChildrenCategoriesViewController {
     @objc func onBackButtonPressed(sender: UIButton) {
         presenter?.onBackButtonPressed()
+    }
+    @objc func onSearchButtonPressed(sender: UIButton) {
+        presenter?.onSearchButtonPressed()
     }
 }
 // MARK: - UICollectionViewDataSource

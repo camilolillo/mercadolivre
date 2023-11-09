@@ -19,7 +19,13 @@ final class RootCategoriesPresenter {
 }
 
 // MARK: - CategoriesPresenterProtocol
-extension RootCategoriesPresenter: RootCategoriesPresenterProtocol {}
+extension RootCategoriesPresenter: RootCategoriesPresenterProtocol {
+    func onSearchButtonPressed() {
+        delegate?.onSearchItemRequested() {
+            //TODO
+        }
+    }
+}
 
 // MARK: - ViewLifecycleable
 extension RootCategoriesPresenter: ViewLifecycleable {

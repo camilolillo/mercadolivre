@@ -18,6 +18,12 @@
 		4A2864552AF9A2DB003B4943 /* UIViewController+isPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2864542AF9A2DB003B4943 /* UIViewController+isPresenting.swift */; };
 		4A2864582AF9AA5A003B4943 /* StatusBarStyleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2864572AF9AA5A003B4943 /* StatusBarStyleNavigationController.swift */; };
 		4A35EAC22AFA9D6C000F199F /* RootCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A35EAC12AFA9D6C000F199F /* RootCategory.swift */; };
+		4A46520D2AFC935E00076C6A /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4652072AFC935E00076C6A /* SearchPresenter.swift */; };
+		4A46520E2AFC935E00076C6A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4652082AFC935E00076C6A /* SearchViewController.swift */; };
+		4A46520F2AFC935E00076C6A /* SearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4652092AFC935E00076C6A /* SearchProtocols.swift */; };
+		4A4652102AFC935E00076C6A /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A46520A2AFC935E00076C6A /* SearchInteractor.swift */; };
+		4A4652112AFC935E00076C6A /* SearchWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A46520B2AFC935E00076C6A /* SearchWireframe.swift */; };
+		4A4652132AFC94B900076C6A /* SearchItemRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4652122AFC94B900076C6A /* SearchItemRequestable.swift */; };
 		4A4A072D2AF934240081C066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A072C2AF934240081C066 /* AppDelegate.swift */; };
 		4A4A07362AF934250081C066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4A07352AF934250081C066 /* Assets.xcassets */; };
 		4A4A07472AF984210081C066 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A07412AF984210081C066 /* SplashPresenter.swift */; };
@@ -105,6 +111,12 @@
 		4A2864542AF9A2DB003B4943 /* UIViewController+isPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+isPresenting.swift"; sourceTree = "<group>"; };
 		4A2864572AF9AA5A003B4943 /* StatusBarStyleNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarStyleNavigationController.swift; sourceTree = "<group>"; };
 		4A35EAC12AFA9D6C000F199F /* RootCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCategory.swift; sourceTree = "<group>"; };
+		4A4652072AFC935E00076C6A /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		4A4652082AFC935E00076C6A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4A4652092AFC935E00076C6A /* SearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProtocols.swift; sourceTree = "<group>"; };
+		4A46520A2AFC935E00076C6A /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		4A46520B2AFC935E00076C6A /* SearchWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWireframe.swift; sourceTree = "<group>"; };
+		4A4652122AFC94B900076C6A /* SearchItemRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemRequestable.swift; sourceTree = "<group>"; };
 		4A4A07292AF934240081C066 /* mercadolivre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mercadolivre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4A072C2AF934240081C066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A4A07352AF934250081C066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -245,6 +257,18 @@
 			path = Responses;
 			sourceTree = "<group>";
 		};
+		4A4652042AFC931000076C6A /* SearchModule */ = {
+			isa = PBXGroup;
+			children = (
+				4A4652072AFC935E00076C6A /* SearchPresenter.swift */,
+				4A4652082AFC935E00076C6A /* SearchViewController.swift */,
+				4A4652092AFC935E00076C6A /* SearchProtocols.swift */,
+				4A46520A2AFC935E00076C6A /* SearchInteractor.swift */,
+				4A46520B2AFC935E00076C6A /* SearchWireframe.swift */,
+			);
+			path = SearchModule;
+			sourceTree = "<group>";
+		};
 		4A4A07202AF934240081C066 = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +306,7 @@
 		4A4A074C2AF9842C0081C066 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4A4652042AFC931000076C6A /* SearchModule */,
 				4A6CAC2E2AFC12F200B21E59 /* ChildrenCategories */,
 				4A6CAC572AFC6FFB00B21E59 /* ListedItems */,
 				4A6CABEC2AFABBCA00B21E59 /* RootCategories */,
@@ -409,6 +434,7 @@
 				4A6CAC472AFC139900B21E59 /* ChildrenCategoriesModuleRequestable.swift */,
 				4A6CAC6A2AFC79C400B21E59 /* ItemListPerChildrenCategoryRequestable.swift */,
 				4A6CABFA2AFABD5E00B21E59 /* RootCategoriesModuleRequestable.swift */,
+				4A4652122AFC94B900076C6A /* SearchItemRequestable.swift */,
 			);
 			path = ModuleDelegates;
 			sourceTree = "<group>";
@@ -633,6 +659,7 @@
 				4A4A074B2AF984210081C066 /* SplashWireframe.swift in Sources */,
 				4A6CABF72AFABBEF00B21E59 /* RootCategoriesInteractor.swift in Sources */,
 				4A6CABDB2AFAAA5900B21E59 /* BaseClient.swift in Sources */,
+				4A4652102AFC935E00076C6A /* SearchInteractor.swift in Sources */,
 				4A6CAC652AFC73A900B21E59 /* GetItemListPerChildrenCategoryResult.swift in Sources */,
 				4A28644B2AF9A09F003B4943 /* BaseCoordinatorParent.swift in Sources */,
 				4A4A07652AF98B7C0081C066 /* UIApplication+KeyWindow.swift in Sources */,
@@ -647,10 +674,13 @@
 				4A6CAC482AFC139900B21E59 /* ChildrenCategoriesModuleRequestable.swift in Sources */,
 				4A2864462AF994E9003B4943 /* UIApplication+TopMostViewController.swift in Sources */,
 				4A6CAC372AFC130E00B21E59 /* ChildrenCategoriesViewController.swift in Sources */,
+				4A4652112AFC935E00076C6A /* SearchWireframe.swift in Sources */,
 				4A6CAC0E2AFBDA9800B21E59 /* Stringable.swift in Sources */,
 				4A4A07472AF984210081C066 /* SplashPresenter.swift in Sources */,
+				4A4652132AFC94B900076C6A /* SearchItemRequestable.swift in Sources */,
 				4A6CAC0A2AFBDA1A00B21E59 /* UICollectionView+Register.swift in Sources */,
 				4A6CABF42AFABBEF00B21E59 /* RootCategoriesPresenter.swift in Sources */,
+				4A46520F2AFC935E00076C6A /* SearchProtocols.swift in Sources */,
 				4A6CABDD2AFAAA9700B21E59 /* ClientProtocol.swift in Sources */,
 				4A6CAC612AFC702800B21E59 /* ListedItemsProtocols.swift in Sources */,
 				4A4A07632AF98B320081C066 /* UIViewController+TopMostViewController.swift in Sources */,
@@ -673,8 +703,10 @@
 				4A6CAC142AFBDBEF00B21E59 /* CollectionViewDataSource.swift in Sources */,
 				4A4A07672AF98C7D0081C066 /* ViewLifecycleable.swift in Sources */,
 				4A6CABD52AFAA91F00B21E59 /* Endpoint.swift in Sources */,
+				4A46520E2AFC935E00076C6A /* SearchViewController.swift in Sources */,
 				4A6CAC4A2AFC15CD00B21E59 /* GetChildrenCategoriesClient.swift in Sources */,
 				4A6CAC3A2AFC130E00B21E59 /* ChildrenCategoriesWireframe.swift in Sources */,
+				4A46520D2AFC935E00076C6A /* SearchPresenter.swift in Sources */,
 				4A4A07512AF9850A0081C066 /* BaseModuleDelegate.swift in Sources */,
 				4A6CABF52AFABBEF00B21E59 /* RootCategoriesViewController.swift in Sources */,
 			);
