@@ -12,7 +12,6 @@ import Foundation
 struct ChildrenCategory: Codable {
     var id: String
     var name: String
-    var total_items_in_this_category: Int
 }
 
 extension ChildrenCategory: CategoryCellDataSource {

@@ -23,8 +23,8 @@ extension AppCoordinator: RootCategoriesModuleRequestable {
 }
 
 extension AppCoordinator: ChildrenCategoriesModuleRequestable {
-    func onChildrenCategoriesModuleRequested(with childrenCategoryId: String) {
-        let vc = ChildrenCategoriesWireframe.createModule(with: self, childrenCategoryId: childrenCategoryId)
+    func onChildrenCategoriesModuleRequested(with rootCategoryId: String) {
+        let vc = ChildrenCategoriesWireframe.createModule(with: self, rootCategoryId: rootCategoryId)
         navigationController.pushViewController(vc, animated: true)
     }
 }
