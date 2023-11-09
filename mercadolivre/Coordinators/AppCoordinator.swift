@@ -21,3 +21,10 @@ extension AppCoordinator: RootCategoriesModuleRequestable {
         navigationController.pushViewController(vc, animated: true)
     }
 }
+
+extension AppCoordinator: ChildrenCategoriesModuleRequestable {
+    func onChildrenCategoriesModuleRequested(with childrenCategoryId: String) {
+        let vc = ChildrenCategoriesWireframe.createModule(with: self, childrenCategoryId: childrenCategoryId)
+        navigationController.pushViewController(vc, animated: true)
+    }
+}

@@ -5,20 +5,28 @@
 
 import UIKit
 
+struct ChildrenCategoriesValues {
+    var name: String
+    var imageStringUrl: String
+}
+
 // MARK: - View
 protocol ChildrenCategoriesViewProtocol: ScreenSizeMeasurable {
-    func set(viewStatus: ViewStatus)
+    func set(loadingStatus: LoadingStatus)
+    func set(values: ChildrenCategoriesValues)
     func reloadData()
 }
 
 
 // MARK: - Interactor
 protocol ChildrenCategoriesInteractorProtocol: AnyObject {
-    func requestRootCategories(with handler: @escaping Handler<GetRootCategoriesResult>)
+    func requestChildrentCategories(with childrenCategoryId: String, handler: @escaping Handler<GetChildrenCategoriesResult>)
+    func getChildrenCategoryId() -> String
 }
 
 
 // MARK: - Presenter
 protocol ChildrenCategoriesPresenterProtocol: ViewLifecycleable, CollectionViewable {
     func onItemSelected(indexPath: IndexPath)
+    func onBackButtonPressed()
 }

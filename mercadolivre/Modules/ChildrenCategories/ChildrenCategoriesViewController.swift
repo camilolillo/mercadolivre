@@ -9,6 +9,15 @@ import UIKit
 final class ChildrenCategoriesViewController: BaseViewController {
     var presenter: ChildrenCategoriesPresenterProtocol?
     
+    private var values: ChildrenCategoriesValues? {
+        didSet {
+            guard let values else {
+                return
+            }
+            title = values.name
+        }
+    }
+    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -18,7 +27,7 @@ final class ChildrenCategoriesViewController: BaseViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(RootCategoryCell.self)
+        collectionView.register(ChildrenCategoryCell.self)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .yellow
         collectionView.showsVerticalScrollIndicator = false
@@ -28,7 +37,8 @@ final class ChildrenCategoriesViewController: BaseViewController {
     private lazy var activityIndicator: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.isHidden = true
+        view.hidesWhenStopped = true
+        view.stopAnimating()
         return view
     }()
 }
@@ -38,6 +48,17 @@ extension ChildrenCategoriesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.onViewDidLoad()
+        view.backgroundColor = .yellow
+        setupNavigationBar()
+        
+        view.addSubview(collectionView)
+        
+        NSLayoutConstraint.activate([
+            collectionView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            collectionView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            collectionView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            collectionView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor)
+        ])
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -48,14 +69,41 @@ extension ChildrenCategoriesViewController {
 
 // MARK: - ChildrenCategoriesViewProtocol
 extension ChildrenCategoriesViewController: ChildrenCategoriesViewProtocol {
-    func set(viewStatus: ViewStatus) {
-        //TODO
+    func set(values: ChildrenCategoriesValues) {
+        self.values = values
+    }
+    func set(loadingStatus: LoadingStatus) {
+        switch loadingStatus {
+        case .loading:
+            activityIndicator.startAnimating()
+        case .loaded:
+            activityIndicator.stopAnimating()
+        }
     }
     func reloadData() {
         collectionView.reloadData()
     }
 }
-
+//MARK: - Methods
+extension ChildrenCategoriesViewController {
+    func setupNavigationBar() {
+        let barButtonItem = UIBarButtonItem(
+            image: .init(systemName: "chevron.left"),
+            style: .plain,
+            target: self,
+            action: #selector(onBackButtonPressed(sender:))
+        )
+        navigationItem.setLeftBarButton(barButtonItem, animated: false)
+        let activityIndicatorItem = UIBarButtonItem(customView: activityIndicator)
+        navigationItem.rightBarButtonItem = activityIndicatorItem
+    }
+}
+//MARK: - Functions
+extension ChildrenCategoriesViewController {
+    @objc func onBackButtonPressed(sender: UIButton) {
+        presenter?.onBackButtonPressed()
+    }
+}
 // MARK: - UICollectionViewDataSource
 extension ChildrenCategoriesViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int { presenter?.getNumberOfSections() ?? 0 }

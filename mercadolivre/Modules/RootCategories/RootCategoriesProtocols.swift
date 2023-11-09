@@ -5,14 +5,14 @@
 
 import UIKit
 
-enum ViewStatus {
+enum LoadingStatus {
     case loading
     case loaded
 }
 
 // MARK: - View
 protocol RootCategoriesViewProtocol: ScreenSizeMeasurable {
-    func set(viewStatus: ViewStatus)
+    func set(loadingStatus: LoadingStatus)
     func reloadData()
 }
 

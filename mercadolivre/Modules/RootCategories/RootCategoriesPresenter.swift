@@ -24,22 +24,30 @@ extension RootCategoriesPresenter: RootCategoriesPresenterProtocol {}
 // MARK: - ViewLifecycleable
 extension RootCategoriesPresenter: ViewLifecycleable {
     func onViewDidLoad() {
+        view?.set(loadingStatus: .loading)
         interactor?.requestRootCategories() { result in
             guard let data = result.rootCategories else {
                 self.delegate?.onPresentAlertRequested(
                     title: "",
                     message: result.message,
-                    handler: { self.view?.set(viewStatus: .loaded) }, cancelHandler: nil
+                    handler: { self.view?.set(loadingStatus: .loaded) }, cancelHandler: nil
                 )
                 return
             }
             self.dataSource = data
+            self.view?.set(loadingStatus: .loaded)
         }
     }
     func onViewWillAppear() {}
 }
 //MARK: - CollectionViewable
 extension RootCategoriesPresenter: CollectionViewable {
+    func onItemSelected(indexPath: IndexPath) {
+        guard let rootCategory = dataSource?[indexPath.row] as? RootCategory else {
+            return
+        }
+        delegate?.onChildrenCategoriesModuleRequested(with: rootCategory.id)
+    }
     func getNumberOfItems(in section: Int) -> Int {
         return dataSource?.count ?? 0
     }
@@ -51,11 +59,5 @@ extension RootCategoriesPresenter: CollectionViewable {
     }
     func onSizeForItem(in section: Int, at index: Int) -> (width: Double, height: Double) {
         return (width: view!.screenWidth-24, height: 58)
-    }
-    func onItemSelected(indexPath: IndexPath) {
-        guard let rootCategory = dataSource?[indexPath.row] as? RootCategory else {
-            return
-        }
-        print(rootCategory.id)
     }
 }

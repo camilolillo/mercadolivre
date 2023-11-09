@@ -10,7 +10,8 @@ import Alamofire
 
 // MARK: - AppRouter
 enum AppRouter {
-    case GetProductRootCategories
+    case GetRootCategories
+    case GetChildrenCategories(String)
 }
 
 // MARK: - Endpoint
@@ -20,7 +21,7 @@ extension AppRouter: Endpoint {
     // MARK: - BaseURL
     var baseURL: URL? {
         switch self {
-        case .GetProductRootCategories:
+        case .GetRootCategories, .GetChildrenCategories:
             return AppEnvironment.baseURL
         }
     }
@@ -28,7 +29,8 @@ extension AppRouter: Endpoint {
     // MARK: - Path
     var path: String {
         switch self {
-        case .GetProductRootCategories: return "/sites/MLC/categories"
+        case .GetRootCategories: return "/sites/MLC/categories"
+        case .GetChildrenCategories(let id): return "categories/\(id)"
         }
     }
 
@@ -45,7 +47,7 @@ extension AppRouter: Endpoint {
     // MARK: - HTTPMethod
     var method: HTTPMethod {
         switch self {
-        case .GetProductRootCategories:
+        case .GetRootCategories, .GetChildrenCategories:
             return .get
         }
     }
