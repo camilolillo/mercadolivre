@@ -4,7 +4,7 @@
 //
 
 // MARK: - View
-protocol ListedItemsViewProtocol: AnyObject {}
+protocol ListedItemsViewProtocol: ScreenSizeMeasurable {}
 
 
 // MARK: - Interactor
@@ -15,4 +15,6 @@ protocol ListedItemsInteractorProtocol: AnyObject {
 
 
 // MARK: - Presenter
-protocol ListedItemsPresenterProtocol: ViewLifecycleable {}
+protocol ListedItemsPresenterProtocol: ViewLifecycleable, CollectionViewable {
+    func onBackButtonPressed()
+}

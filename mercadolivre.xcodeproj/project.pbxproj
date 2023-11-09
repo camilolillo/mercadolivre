@@ -90,6 +90,7 @@
 		4A6CAC6B2AFC79C400B21E59 /* ItemListPerChildrenCategoryRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC6A2AFC79C400B21E59 /* ItemListPerChildrenCategoryRequestable.swift */; };
 		4A6CAC6D2AFC7D0F00B21E59 /* ParametersConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC6C2AFC7D0F00B21E59 /* ParametersConvertible.swift */; };
 		4A6CAC702AFC7DBB00B21E59 /* GetItemListPerChildrenCategoryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC6F2AFC7DBB00B21E59 /* GetItemListPerChildrenCategoryParameters.swift */; };
+		4A6CAC722AFC80B900B21E59 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC712AFC80B900B21E59 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +179,7 @@
 		4A6CAC6A2AFC79C400B21E59 /* ItemListPerChildrenCategoryRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListPerChildrenCategoryRequestable.swift; sourceTree = "<group>"; };
 		4A6CAC6C2AFC7D0F00B21E59 /* ParametersConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersConvertible.swift; sourceTree = "<group>"; };
 		4A6CAC6F2AFC7DBB00B21E59 /* GetItemListPerChildrenCategoryParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemListPerChildrenCategoryParameters.swift; sourceTree = "<group>"; };
+		4A6CAC712AFC80B900B21E59 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		6F9F0029AE5B709256D8A982 /* Pods-mercadolivre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mercadolivre.release.xcconfig"; path = "Target Support Files/Pods-mercadolivre/Pods-mercadolivre.release.xcconfig"; sourceTree = "<group>"; };
 		B93967E54EC0DE7B9D747241 /* Pods_mercadolivre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mercadolivre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -445,10 +447,11 @@
 		4A6CAC572AFC6FFB00B21E59 /* ListedItems */ = {
 			isa = PBXGroup;
 			children = (
-				4A6CAC592AFC702800B21E59 /* ListedItemsPresenter.swift */,
-				4A6CAC5A2AFC702800B21E59 /* ListedItemsViewController.swift */,
-				4A6CAC5B2AFC702800B21E59 /* ListedItemsProtocols.swift */,
+				4A6CAC712AFC80B900B21E59 /* ItemCell.swift */,
 				4A6CAC5C2AFC702800B21E59 /* ListedItemsInteractor.swift */,
+				4A6CAC592AFC702800B21E59 /* ListedItemsPresenter.swift */,
+				4A6CAC5B2AFC702800B21E59 /* ListedItemsProtocols.swift */,
+				4A6CAC5A2AFC702800B21E59 /* ListedItemsViewController.swift */,
 				4A6CAC5D2AFC702800B21E59 /* ListedItemsWireframe.swift */,
 			);
 			path = ListedItems;
@@ -610,6 +613,7 @@
 				4A6CABF82AFABBEF00B21E59 /* RootCategoriesWireframe.swift in Sources */,
 				4A6CAC122AFBDBC100B21E59 /* CollectionViewable.swift in Sources */,
 				4A4A075B2AF986D60081C066 /* GoBackRequestable.swift in Sources */,
+				4A6CAC722AFC80B900B21E59 /* ItemCell.swift in Sources */,
 				4A6CAC182AFBDC7500B21E59 /* CollectionViewSizeable.swift in Sources */,
 				4A6CAC382AFC130E00B21E59 /* ChildrenCategoriesProtocols.swift in Sources */,
 				4A2864512AF9A212003B4943 /* Array+Coordinator.swift in Sources */,

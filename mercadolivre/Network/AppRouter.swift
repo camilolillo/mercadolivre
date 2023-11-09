@@ -18,7 +18,6 @@ enum AppRouter {
 // MARK: - Endpoint
 extension AppRouter: Endpoint {
 
-
     // MARK: - BaseURL
     var baseURL: URL? {
         switch self {
