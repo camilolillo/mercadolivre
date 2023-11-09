@@ -48,7 +48,7 @@ extension ChildrenCategoriesPresenter: ChildrenCategoriesPresenterProtocol {
 extension ChildrenCategoriesPresenter: ViewLifecycleable {
     func onViewDidLoad() {
         view?.set(loadingStatus: .loading)
-        interactor?.requestChildrentCategories(with: interactor?.getChildrenCategoryId() ?? "") { result in
+        interactor?.requestChildrentCategories(with: interactor?.getRootCategoryId() ?? "") { result in
             guard let data = result.childrenCategories else {
                 self.delegate?.onPresentAlertRequested(
                     title: "",

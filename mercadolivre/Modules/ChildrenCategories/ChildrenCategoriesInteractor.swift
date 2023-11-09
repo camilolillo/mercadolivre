@@ -6,18 +6,18 @@
 // MARK: - ChildrenCategoriesInteractor
 final class ChildrenCategoriesInteractor {
     private let getChildrenCategoriesClient: GetChildrenCategoriesClientProtocol
-    private let childrenCategoryId: String
-    init(getChildrenCategoriesClient: GetChildrenCategoriesClientProtocol, childrenCategoryId: String) {
+    private let rootCategoryId: String
+    init(getChildrenCategoriesClient: GetChildrenCategoriesClientProtocol, rootCategoryId: String) {
         self.getChildrenCategoriesClient = getChildrenCategoriesClient
-        self.childrenCategoryId = childrenCategoryId
+        self.rootCategoryId = rootCategoryId
     }
 }
 
 // MARK: - ChildrenCategoriesInteractorProtocol
 extension ChildrenCategoriesInteractor: ChildrenCategoriesInteractorProtocol {
-    func requestChildrentCategories(with childrenCategoryId: String, handler: @escaping Handler<GetChildrenCategoriesResult>) {
+    func requestChildrentCategories(with rootCategoryId: String, handler: @escaping Handler<GetChildrenCategoriesResult>) {
         let failureResult = GetChildrenCategoriesResult(message: .defaultAlertMessage)
-        getChildrenCategoriesClient.getChildrenCategories(with: childrenCategoryId) { result in
+        getChildrenCategoriesClient.getChildrenCategories(with: rootCategoryId) { result in
             switch result {
             case .success(let response):
                 guard !response.children_categories.isEmpty else {
@@ -38,7 +38,7 @@ extension ChildrenCategoriesInteractor: ChildrenCategoriesInteractorProtocol {
             }
         }
     }
-    func getChildrenCategoryId() -> String {
-        return childrenCategoryId
+    func getRootCategoryId() -> String {
+        return rootCategoryId
     }
 }

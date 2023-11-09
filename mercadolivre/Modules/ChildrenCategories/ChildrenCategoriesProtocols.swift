@@ -20,8 +20,8 @@ protocol ChildrenCategoriesViewProtocol: ScreenSizeMeasurable {
 
 // MARK: - Interactor
 protocol ChildrenCategoriesInteractorProtocol: AnyObject {
-    func requestChildrentCategories(with childrenCategoryId: String, handler: @escaping Handler<GetChildrenCategoriesResult>)
-    func getChildrenCategoryId() -> String
+    func requestChildrentCategories(with rootCategoryId: String, handler: @escaping Handler<GetChildrenCategoriesResult>)
+    func getRootCategoryId() -> String
 }
 
 
