@@ -15,7 +15,8 @@ enum ListedItemsWireframe {
         let view = ListedItemsViewController()
         let presenter = ListedItemsPresenter()
         let interactor = ListedItemsInteractor(
-            childrenCategoryId: childrenCategoryId
+            childrenCategoryId: childrenCategoryId,
+            getItemListPerChildrenCategoryClient: GetItemListPerChildrenCategoryClient()
         )
 
         view.presenter = presenter

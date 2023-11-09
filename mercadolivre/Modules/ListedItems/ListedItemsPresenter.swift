@@ -16,6 +16,10 @@ extension ListedItemsPresenter: ListedItemsPresenterProtocol {}
 
 // MARK: - ViewLifecycleable
 extension ListedItemsPresenter: ViewLifecycleable {
-    func onViewDidLoad() {}
+    func onViewDidLoad() {
+        interactor?.requesItemList(with: interactor?.getChildrenCategoryId() ?? "") { result in
+            print(result)
+        }
+    }
     func onViewWillAppear() {}
 }

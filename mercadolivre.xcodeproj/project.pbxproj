@@ -85,6 +85,8 @@
 		4A6CAC622AFC702800B21E59 /* ListedItemsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC5C2AFC702800B21E59 /* ListedItemsInteractor.swift */; };
 		4A6CAC632AFC702800B21E59 /* ListedItemsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC5D2AFC702800B21E59 /* ListedItemsWireframe.swift */; };
 		4A6CAC652AFC73A900B21E59 /* GetItemListPerChildrenCategoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC642AFC73A900B21E59 /* GetItemListPerChildrenCategoryResult.swift */; };
+		4A6CAC672AFC778400B21E59 /* GetItemListPerChildrenCategoryClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC662AFC778400B21E59 /* GetItemListPerChildrenCategoryClient.swift */; };
+		4A6CAC692AFC77D500B21E59 /* GetItemListPerChildrenCategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC682AFC77D500B21E59 /* GetItemListPerChildrenCategoryResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +170,8 @@
 		4A6CAC5C2AFC702800B21E59 /* ListedItemsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListedItemsInteractor.swift; sourceTree = "<group>"; };
 		4A6CAC5D2AFC702800B21E59 /* ListedItemsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListedItemsWireframe.swift; sourceTree = "<group>"; };
 		4A6CAC642AFC73A900B21E59 /* GetItemListPerChildrenCategoryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemListPerChildrenCategoryResult.swift; sourceTree = "<group>"; };
+		4A6CAC662AFC778400B21E59 /* GetItemListPerChildrenCategoryClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemListPerChildrenCategoryClient.swift; sourceTree = "<group>"; };
+		4A6CAC682AFC77D500B21E59 /* GetItemListPerChildrenCategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemListPerChildrenCategoryResponse.swift; sourceTree = "<group>"; };
 		6F9F0029AE5B709256D8A982 /* Pods-mercadolivre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mercadolivre.release.xcconfig"; path = "Target Support Files/Pods-mercadolivre/Pods-mercadolivre.release.xcconfig"; sourceTree = "<group>"; };
 		B93967E54EC0DE7B9D747241 /* Pods_mercadolivre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mercadolivre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -227,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				4A6CAC4F2AFC1E4500B21E59 /* GetChildrenCategoriesResponse.swift */,
+				4A6CAC682AFC77D500B21E59 /* GetItemListPerChildrenCategoryResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -369,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				4A6CAC492AFC15CD00B21E59 /* GetChildrenCategoriesClient.swift */,
+				4A6CAC662AFC778400B21E59 /* GetItemListPerChildrenCategoryClient.swift */,
 				4A6CABD72AFAAA0500B21E59 /* GetRootCategoriesClient.swift */,
 			);
 			path = Clients;
@@ -572,6 +578,7 @@
 				4A6CAC202AFC0B6C00B21E59 /* ChildrenCategory.swift in Sources */,
 				4A4A076E2AF98E500081C066 /* Optional+IsNill.swift in Sources */,
 				4A2864532AF9A292003B4943 /* UIViewController+DismissPresentedViewController.swift in Sources */,
+				4A6CAC692AFC77D500B21E59 /* GetItemListPerChildrenCategoryResponse.swift in Sources */,
 				4A6CAC1C2AFBDFC600B21E59 /* UIViewController+ScreenWidth.swift in Sources */,
 				4A6CABFF2AFAD7BB00B21E59 /* DataSource.swift in Sources */,
 				4A2864552AF9A2DB003B4943 /* UIViewController+isPresenting.swift in Sources */,
@@ -581,6 +588,7 @@
 				4A4A074A2AF984210081C066 /* SplashInteractor.swift in Sources */,
 				4A6CAC5F2AFC702800B21E59 /* ListedItemsPresenter.swift in Sources */,
 				4A6CABF62AFABBEF00B21E59 /* RootCategoriesProtocols.swift in Sources */,
+				4A6CAC672AFC778400B21E59 /* GetItemListPerChildrenCategoryClient.swift in Sources */,
 				4A6CAC632AFC702800B21E59 /* ListedItemsWireframe.swift in Sources */,
 				4A6CABF82AFABBEF00B21E59 /* RootCategoriesWireframe.swift in Sources */,
 				4A6CAC122AFBDBC100B21E59 /* CollectionViewable.swift in Sources */,
