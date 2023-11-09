@@ -28,3 +28,10 @@ extension AppCoordinator: ChildrenCategoriesModuleRequestable {
         navigationController.pushViewController(vc, animated: true)
     }
 }
+
+extension AppCoordinator: ItemListPerChildrenCategoryRequestable {
+    func onItemListRequested(with childrenCategoryId: String) {
+        let vc = ListedItemsWireframe.createModule(with: self, childrenCategoryId: childrenCategoryId)
+        navigationController.pushViewController(vc, animated: true)
+    }
+}
