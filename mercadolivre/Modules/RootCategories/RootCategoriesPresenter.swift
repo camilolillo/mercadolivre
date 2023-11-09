@@ -24,16 +24,18 @@ extension RootCategoriesPresenter: RootCategoriesPresenterProtocol {}
 // MARK: - ViewLifecycleable
 extension RootCategoriesPresenter: ViewLifecycleable {
     func onViewDidLoad() {
+        view?.set(loadingStatus: .loading)
         interactor?.requestRootCategories() { result in
             guard let data = result.rootCategories else {
                 self.delegate?.onPresentAlertRequested(
                     title: "",
                     message: result.message,
-                    handler: { self.view?.set(viewStatus: .loaded) }, cancelHandler: nil
+                    handler: { self.view?.set(loadingStatus: .loaded) }, cancelHandler: nil
                 )
                 return
             }
             self.dataSource = data
+            self.view?.set(loadingStatus: .loaded)
         }
     }
     func onViewWillAppear() {}

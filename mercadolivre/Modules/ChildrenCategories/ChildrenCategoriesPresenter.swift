@@ -47,16 +47,27 @@ extension ChildrenCategoriesPresenter: ChildrenCategoriesPresenterProtocol {
 // MARK: - ViewLifecycleable
 extension ChildrenCategoriesPresenter: ViewLifecycleable {
     func onViewDidLoad() {
-        interactor?.requestRootCategories(with: interactor?.getChildrenCategoryId() ?? "") { result in
+        view?.set(loadingStatus: .loading)
+        interactor?.requestChildrentCategories(with: interactor?.getChildrenCategoryId() ?? "") { result in
             guard let data = result.childrenCategories else {
                 self.delegate?.onPresentAlertRequested(
                     title: "",
                     message: result.message,
-                    handler: { self.view?.set(viewStatus: .loaded) }, cancelHandler: nil
+                    handler: { self.view?.set(loadingStatus: .loaded) }, cancelHandler: nil
                 )
                 return
             }
             self.dataSource = data
+            if let name = result.name, let imageUrlAsString = result.picture {
+                let values = ChildrenCategoriesValues(
+                    name: name,
+                    imageStringUrl: imageUrlAsString
+                )
+                self.view?.set(values: values)
+                self.view?.set(loadingStatus: .loaded)
+            } else {
+                self.view?.set(loadingStatus: .loaded)
+            }
         }
     }
     func onViewWillAppear() {}

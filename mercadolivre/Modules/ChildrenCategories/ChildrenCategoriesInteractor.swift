@@ -15,7 +15,7 @@ final class ChildrenCategoriesInteractor {
 
 // MARK: - ChildrenCategoriesInteractorProtocol
 extension ChildrenCategoriesInteractor: ChildrenCategoriesInteractorProtocol {
-    func requestRootCategories(with childrenCategoryId: String, handler: @escaping Handler<GetChildrenCategoriesResult>) {
+    func requestChildrentCategories(with childrenCategoryId: String, handler: @escaping Handler<GetChildrenCategoriesResult>) {
         let failureResult = GetChildrenCategoriesResult(message: .defaultAlertMessage)
         getChildrenCategoriesClient.getChildrenCategories(with: childrenCategoryId) { result in
             switch result {

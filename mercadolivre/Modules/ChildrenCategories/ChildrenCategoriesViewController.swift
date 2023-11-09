@@ -9,6 +9,15 @@ import UIKit
 final class ChildrenCategoriesViewController: BaseViewController {
     var presenter: ChildrenCategoriesPresenterProtocol?
     
+    private var values: ChildrenCategoriesValues? {
+        didSet {
+            guard let values else {
+                return
+            }
+            title = values.name
+        }
+    }
+    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -28,7 +37,8 @@ final class ChildrenCategoriesViewController: BaseViewController {
     private lazy var activityIndicator: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.isHidden = true
+        view.hidesWhenStopped = true
+        view.stopAnimating()
         return view
     }()
 }
@@ -59,8 +69,16 @@ extension ChildrenCategoriesViewController {
 
 // MARK: - ChildrenCategoriesViewProtocol
 extension ChildrenCategoriesViewController: ChildrenCategoriesViewProtocol {
-    func set(viewStatus: ViewStatus) {
-        //TODO
+    func set(values: ChildrenCategoriesValues) {
+        self.values = values
+    }
+    func set(loadingStatus: LoadingStatus) {
+        switch loadingStatus {
+        case .loading:
+            activityIndicator.startAnimating()
+        case .loaded:
+            activityIndicator.stopAnimating()
+        }
     }
     func reloadData() {
         collectionView.reloadData()
@@ -76,6 +94,8 @@ extension ChildrenCategoriesViewController {
             action: #selector(onBackButtonPressed(sender:))
         )
         navigationItem.setLeftBarButton(barButtonItem, animated: false)
+        let activityIndicatorItem = UIBarButtonItem(customView: activityIndicator)
+        navigationItem.rightBarButtonItem = activityIndicatorItem
     }
 }
 //MARK: - Functions

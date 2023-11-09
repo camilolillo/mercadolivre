@@ -28,7 +28,8 @@ final class RootCategoriesViewController: BaseViewController {
     private lazy var activityIndicator: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.isHidden = true
+        view.hidesWhenStopped = true
+        view.stopAnimating()
         return view
     }()
 }
@@ -65,12 +66,19 @@ extension RootCategoriesViewController {
 extension RootCategoriesViewController {
     func setupNavigationBar() {
         navigationItem.setHidesBackButton(true, animated: false)
+        let activityIndicatorItem = UIBarButtonItem(customView: activityIndicator)
+        navigationItem.rightBarButtonItem = activityIndicatorItem
     }
 }
 // MARK: - CategoriesViewProtocol
 extension RootCategoriesViewController: RootCategoriesViewProtocol {
-    func set(viewStatus: ViewStatus) {
-        //TODO
+    func set(loadingStatus: LoadingStatus) {
+        switch loadingStatus {
+        case .loading:
+            activityIndicator.startAnimating()
+        case .loaded:
+            activityIndicator.stopAnimating()
+        }
     }
     func reloadData() {
         collectionView.reloadData()
