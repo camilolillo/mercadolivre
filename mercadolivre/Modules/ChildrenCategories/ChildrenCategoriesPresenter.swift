@@ -20,6 +20,9 @@ final class ChildrenCategoriesPresenter {
 
 // MARK: - ChildrenCategoriesPresenterProtocol
 extension ChildrenCategoriesPresenter: ChildrenCategoriesPresenterProtocol {
+    func onBackButtonPressed() {
+        delegate?.onGoBackRequested()
+    }
     func onItemSelected(indexPath: IndexPath) {
         guard let childrenCategory = dataSource?[indexPath.row] as? ChildrenCategory else {
             return
@@ -45,7 +48,15 @@ extension ChildrenCategoriesPresenter: ChildrenCategoriesPresenterProtocol {
 extension ChildrenCategoriesPresenter: ViewLifecycleable {
     func onViewDidLoad() {
         interactor?.requestRootCategories(with: interactor?.getChildrenCategoryId() ?? "") { result in
-            print(result)
+            guard let data = result.childrenCategories else {
+                self.delegate?.onPresentAlertRequested(
+                    title: "",
+                    message: result.message,
+                    handler: { self.view?.set(viewStatus: .loaded) }, cancelHandler: nil
+                )
+                return
+            }
+            self.dataSource = data
         }
     }
     func onViewWillAppear() {}

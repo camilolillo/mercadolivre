@@ -30,7 +30,7 @@ extension AppRouter: Endpoint {
     var path: String {
         switch self {
         case .GetRootCategories: return "/sites/MLC/categories"
-        case .GetChildrenCategories(let id): return "https://api.mercadolibre.com/categories/\(id)"
+        case .GetChildrenCategories(let id): return "categories/\(id)"
         }
     }
 

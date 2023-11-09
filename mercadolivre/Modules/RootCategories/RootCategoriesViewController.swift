@@ -67,7 +67,6 @@ extension RootCategoriesViewController {
         navigationItem.setHidesBackButton(true, animated: false)
     }
 }
-
 // MARK: - CategoriesViewProtocol
 extension RootCategoriesViewController: RootCategoriesViewProtocol {
     func set(viewStatus: ViewStatus) {

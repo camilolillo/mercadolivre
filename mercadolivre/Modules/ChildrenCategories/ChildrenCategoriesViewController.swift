@@ -18,7 +18,7 @@ final class ChildrenCategoriesViewController: BaseViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(RootCategoryCell.self)
+        collectionView.register(ChildrenCategoryCell.self)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .yellow
         collectionView.showsVerticalScrollIndicator = false
@@ -38,6 +38,17 @@ extension ChildrenCategoriesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.onViewDidLoad()
+        view.backgroundColor = .yellow
+        setupNavigationBar()
+        
+        view.addSubview(collectionView)
+        
+        NSLayoutConstraint.activate([
+            collectionView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            collectionView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            collectionView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            collectionView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor)
+        ])
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -55,7 +66,24 @@ extension ChildrenCategoriesViewController: ChildrenCategoriesViewProtocol {
         collectionView.reloadData()
     }
 }
-
+//MARK: - Methods
+extension ChildrenCategoriesViewController {
+    func setupNavigationBar() {
+        let barButtonItem = UIBarButtonItem(
+            image: .init(systemName: "chevron.left"),
+            style: .plain,
+            target: self,
+            action: #selector(onBackButtonPressed(sender:))
+        )
+        navigationItem.setLeftBarButton(barButtonItem, animated: false)
+    }
+}
+//MARK: - Functions
+extension ChildrenCategoriesViewController {
+    @objc func onBackButtonPressed(sender: UIButton) {
+        presenter?.onBackButtonPressed()
+    }
+}
 // MARK: - UICollectionViewDataSource
 extension ChildrenCategoriesViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int { presenter?.getNumberOfSections() ?? 0 }

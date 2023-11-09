@@ -22,4 +22,5 @@ protocol ChildrenCategoriesInteractorProtocol: AnyObject {
 // MARK: - Presenter
 protocol ChildrenCategoriesPresenterProtocol: ViewLifecycleable, CollectionViewable {
     func onItemSelected(indexPath: IndexPath)
+    func onBackButtonPressed()
 }
