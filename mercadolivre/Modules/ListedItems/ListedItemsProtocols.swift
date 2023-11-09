@@ -13,7 +13,7 @@ protocol ListedItemsViewProtocol: ScreenSizeMeasurable {
 
 // MARK: - Interactor
 protocol ListedItemsInteractorProtocol: AnyObject {
-    func requesItemList(with parameters: GetItemListPerChildrenCategoryParameters, handler: @escaping Handler<GetItemListPerChildrenCategoryResult>)
+    func requesItemList(with parameters: GetItemListPerChildrenCategoryParameters, handler: @escaping Handler<GetItemListResult>)
     func getChildrenCategoryId() -> String
 }
 

@@ -15,8 +15,8 @@ final class ListedItemsInteractor {
 
 // MARK: - ListedItemsInteractorProtocol
 extension ListedItemsInteractor: ListedItemsInteractorProtocol {
-    func requesItemList(with parameters: GetItemListPerChildrenCategoryParameters, handler: @escaping Handler<GetItemListPerChildrenCategoryResult>) {
-        let failureResult = GetItemListPerChildrenCategoryResult(message: .defaultAlertMessage)
+    func requesItemList(with parameters: GetItemListPerChildrenCategoryParameters, handler: @escaping Handler<GetItemListResult>) {
+        let failureResult = GetItemListResult(message: .defaultAlertMessage)
         getItemListPerChildrenCategoryClient.getItemList(with: parameters) { result in
             switch result {
             case .success(let response):
@@ -24,7 +24,7 @@ extension ListedItemsInteractor: ListedItemsInteractorProtocol {
                     handler(failureResult)
                     return
                 }
-                handler(GetItemListPerChildrenCategoryResult(message: "Success", results: response.results))
+                handler(GetItemListResult(message: "Success", results: response.results))
             case .failure(let error):
                 print(error)
                 handler(failureResult)
