@@ -9,5 +9,5 @@ import Foundation
 
 struct GetItemListPerChildrenCategoryResult {
     var message: String
-    var results: [Item]
+    var results: [Item]?
 }

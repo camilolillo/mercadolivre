@@ -2,9 +2,13 @@
 //  ListedItemsProtocols.swift
 //  mercadolivre
 //
+import Foundation
 
 // MARK: - View
-protocol ListedItemsViewProtocol: ScreenSizeMeasurable {}
+protocol ListedItemsViewProtocol: ScreenSizeMeasurable {
+    func set(loadingStatus: LoadingStatus)
+    func reloadData()
+}
 
 
 // MARK: - Interactor
@@ -16,5 +20,6 @@ protocol ListedItemsInteractorProtocol: AnyObject {
 
 // MARK: - Presenter
 protocol ListedItemsPresenterProtocol: ViewLifecycleable, CollectionViewable {
+    func onItemSelected(indexPath: IndexPath)
     func onBackButtonPressed()
 }

@@ -60,7 +60,19 @@ extension ListedItemsViewController {
 }
 
 // MARK: - ListedItemsViewProtocol
-extension ListedItemsViewController: ListedItemsViewProtocol {}
+extension ListedItemsViewController: ListedItemsViewProtocol {
+    func set(loadingStatus: LoadingStatus) {
+        switch loadingStatus {
+        case .loading:
+            activityIndicator.startAnimating()
+        case .loaded:
+            activityIndicator.stopAnimating()
+        }
+    }
+    func reloadData() {
+        collectionView.reloadData()
+    }
+}
 //MARK: - Methods
 extension ListedItemsViewController {
     func setupNavigationBar() {
@@ -87,22 +99,6 @@ extension ListedItemsViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int { presenter?.getNumberOfSections() ?? 0 }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { presenter?.getNumberOfItems(in: section) ?? 0 }
-
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let categoryIndex = indexPath.section
-        let reuseIdentifier = presenter?.onHeaderItemReuseIdentifierRequested(in: categoryIndex) ?? ""
-        let _headerView = collectionView.dequeueReusableSupplementaryView(
-            ofKind: kind,
-            withReuseIdentifier: reuseIdentifier,
-            for: indexPath
-        )
-        if let headerView = _headerView as? any DataSourceable, let dataSource = presenter?.onHeaderItemDataSourceRequested(
-            in: categoryIndex
-        ) {
-            headerView.set(dataSource: dataSource)
-        }
-        return _headerView
-    }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let categoryIndex = indexPath.section
