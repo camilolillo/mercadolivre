@@ -7,20 +7,30 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 final class ItemCell: DataSourceableCell {
     
-    var title: UILabel = {
+    private lazy var title: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 14)
+        label.font = .systemFont(ofSize: 10)
         return label
     }()
+    
+    private lazy var imageView: UIImageView = {
+        let view = UIImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = view.frame.size.width / 2
+        view.clipsToBounds = true
+        view.contentMode = .scaleAspectFill
+        return view
+    }()
         
-    var dataSource: CategoryCellDataSource? {
+    var dataSource: ItemCellDataSource? {
         didSet {
             guard let dataSource else { return }
-            title.text = dataSource.title
+            title.text = dataSource.name
         }
     }
     
@@ -30,7 +40,11 @@ final class ItemCell: DataSourceableCell {
         contentView.addSubview(title)
         NSLayoutConstraint.activate([
             title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            title.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            title.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            imageView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.8),
+            imageView.widthAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.8),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            imageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
     }
 }
