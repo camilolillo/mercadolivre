@@ -91,22 +91,6 @@ extension RootCategoriesViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { presenter?.getNumberOfItems(in: section) ?? 0 }
 
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let categoryIndex = indexPath.section
-        let reuseIdentifier = presenter?.onHeaderItemReuseIdentifierRequested(in: categoryIndex) ?? ""
-        let _headerView = collectionView.dequeueReusableSupplementaryView(
-            ofKind: kind,
-            withReuseIdentifier: reuseIdentifier,
-            for: indexPath
-        )
-        if let headerView = _headerView as? any DataSourceable, let dataSource = presenter?.onHeaderItemDataSourceRequested(
-            in: categoryIndex
-        ) {
-            headerView.set(dataSource: dataSource)
-        }
-        return _headerView
-    }
-
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let categoryIndex = indexPath.section
         let reuseIdentifier = presenter?.onReuseIdentifierRequested(in: categoryIndex, at: indexPath.item) ?? ""

@@ -27,7 +27,7 @@ extension ChildrenCategoriesPresenter: ChildrenCategoriesPresenterProtocol {
         guard let childrenCategory = dataSource?[indexPath.row] as? ChildrenCategory else {
             return
         }
-        print(childrenCategory)
+        delegate?.onItemListRequested(with: childrenCategory.id)
     }
     func getNumberOfItems(in section: Int) -> Int {
         return dataSource?.count ?? 0

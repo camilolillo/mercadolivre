@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ItemCellDataSource {
+protocol ItemCellDataSource: DataSource {
     var name: String { get }
     var imageUrlString: String { get }
 }

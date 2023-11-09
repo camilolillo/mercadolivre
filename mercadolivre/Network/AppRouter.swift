@@ -12,12 +12,11 @@ import Alamofire
 enum AppRouter {
     case getRootCategories
     case getChildrenCategories(String)
-    case getItemsPerChildrenCategory(String)
+    case getItemsPerChildrenCategory(ParametersConvertible)
 }
 
 // MARK: - Endpoint
 extension AppRouter: Endpoint {
-
 
     // MARK: - BaseURL
     var baseURL: URL? {
@@ -32,7 +31,7 @@ extension AppRouter: Endpoint {
         switch self {
         case .getRootCategories: return "sites/MLC/categories"
         case .getChildrenCategories(let rootCategoryId): return "categories/\(rootCategoryId)"
-        case .getItemsPerChildrenCategory(let childrenCategoryId): return "sites/MLC/search?category=\(childrenCategoryId)"
+        case .getItemsPerChildrenCategory: return "sites/MLC/search"
         }
     }
 
@@ -57,6 +56,8 @@ extension AppRouter: Endpoint {
     // MARK: - Parameters
     var parameters: Parameters {
         switch self {
+        case .getItemsPerChildrenCategory(let parameters):
+            return parameters.asParameters
         default:
             return [:]
         }

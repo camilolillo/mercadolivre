@@ -85,6 +85,12 @@
 		4A6CAC622AFC702800B21E59 /* ListedItemsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC5C2AFC702800B21E59 /* ListedItemsInteractor.swift */; };
 		4A6CAC632AFC702800B21E59 /* ListedItemsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC5D2AFC702800B21E59 /* ListedItemsWireframe.swift */; };
 		4A6CAC652AFC73A900B21E59 /* GetItemListPerChildrenCategoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC642AFC73A900B21E59 /* GetItemListPerChildrenCategoryResult.swift */; };
+		4A6CAC672AFC778400B21E59 /* GetItemListPerChildrenCategoryClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC662AFC778400B21E59 /* GetItemListPerChildrenCategoryClient.swift */; };
+		4A6CAC692AFC77D500B21E59 /* GetItemListPerChildrenCategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC682AFC77D500B21E59 /* GetItemListPerChildrenCategoryResponse.swift */; };
+		4A6CAC6B2AFC79C400B21E59 /* ItemListPerChildrenCategoryRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC6A2AFC79C400B21E59 /* ItemListPerChildrenCategoryRequestable.swift */; };
+		4A6CAC6D2AFC7D0F00B21E59 /* ParametersConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC6C2AFC7D0F00B21E59 /* ParametersConvertible.swift */; };
+		4A6CAC702AFC7DBB00B21E59 /* GetItemListPerChildrenCategoryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC6F2AFC7DBB00B21E59 /* GetItemListPerChildrenCategoryParameters.swift */; };
+		4A6CAC722AFC80B900B21E59 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC712AFC80B900B21E59 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +174,12 @@
 		4A6CAC5C2AFC702800B21E59 /* ListedItemsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListedItemsInteractor.swift; sourceTree = "<group>"; };
 		4A6CAC5D2AFC702800B21E59 /* ListedItemsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListedItemsWireframe.swift; sourceTree = "<group>"; };
 		4A6CAC642AFC73A900B21E59 /* GetItemListPerChildrenCategoryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemListPerChildrenCategoryResult.swift; sourceTree = "<group>"; };
+		4A6CAC662AFC778400B21E59 /* GetItemListPerChildrenCategoryClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemListPerChildrenCategoryClient.swift; sourceTree = "<group>"; };
+		4A6CAC682AFC77D500B21E59 /* GetItemListPerChildrenCategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemListPerChildrenCategoryResponse.swift; sourceTree = "<group>"; };
+		4A6CAC6A2AFC79C400B21E59 /* ItemListPerChildrenCategoryRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListPerChildrenCategoryRequestable.swift; sourceTree = "<group>"; };
+		4A6CAC6C2AFC7D0F00B21E59 /* ParametersConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersConvertible.swift; sourceTree = "<group>"; };
+		4A6CAC6F2AFC7DBB00B21E59 /* GetItemListPerChildrenCategoryParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemListPerChildrenCategoryParameters.swift; sourceTree = "<group>"; };
+		4A6CAC712AFC80B900B21E59 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		6F9F0029AE5B709256D8A982 /* Pods-mercadolivre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mercadolivre.release.xcconfig"; path = "Target Support Files/Pods-mercadolivre/Pods-mercadolivre.release.xcconfig"; sourceTree = "<group>"; };
 		B93967E54EC0DE7B9D747241 /* Pods_mercadolivre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mercadolivre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -207,6 +219,7 @@
 				4A6CAC552AFC6B9800B21E59 /* Item.swift */,
 				4A35EAC12AFA9D6C000F199F /* RootCategory.swift */,
 				4A6CAC062AFBC7DE00B21E59 /* HandlersResults */,
+				4A6CAC6E2AFC7DA600B21E59 /* Parameters */,
 				4A35EAC42AFAA012000F199F /* Responses */,
 			);
 			path = Model;
@@ -227,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				4A6CAC4F2AFC1E4500B21E59 /* GetChildrenCategoriesResponse.swift */,
+				4A6CAC682AFC77D500B21E59 /* GetItemListPerChildrenCategoryResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -329,10 +343,11 @@
 				4A4A07582AF986750081C066 /* DismissRequestable.swift */,
 				4A6CABD42AFAA91F00B21E59 /* Endpoint.swift */,
 				4A4A075A2AF986D60081C066 /* GoBackRequestable.swift */,
+				4A6CAC6C2AFC7D0F00B21E59 /* ParametersConvertible.swift */,
+				4A6CAC192AFBDF4400B21E59 /* ScreenSizeMeasurable.swift */,
 				4A6CAC0D2AFBDA9800B21E59 /* Stringable.swift */,
 				4A4A07662AF98C7D0081C066 /* ViewLifecycleable.swift */,
 				4A6CAC0B2AFBDA5C00B21E59 /* Withable.swift */,
-				4A6CAC192AFBDF4400B21E59 /* ScreenSizeMeasurable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -369,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				4A6CAC492AFC15CD00B21E59 /* GetChildrenCategoriesClient.swift */,
+				4A6CAC662AFC778400B21E59 /* GetItemListPerChildrenCategoryClient.swift */,
 				4A6CABD72AFAAA0500B21E59 /* GetRootCategoriesClient.swift */,
 			);
 			path = Clients;
@@ -391,6 +407,7 @@
 			isa = PBXGroup;
 			children = (
 				4A6CAC472AFC139900B21E59 /* ChildrenCategoriesModuleRequestable.swift */,
+				4A6CAC6A2AFC79C400B21E59 /* ItemListPerChildrenCategoryRequestable.swift */,
 				4A6CABFA2AFABD5E00B21E59 /* RootCategoriesModuleRequestable.swift */,
 			);
 			path = ModuleDelegates;
@@ -430,13 +447,22 @@
 		4A6CAC572AFC6FFB00B21E59 /* ListedItems */ = {
 			isa = PBXGroup;
 			children = (
-				4A6CAC592AFC702800B21E59 /* ListedItemsPresenter.swift */,
-				4A6CAC5A2AFC702800B21E59 /* ListedItemsViewController.swift */,
-				4A6CAC5B2AFC702800B21E59 /* ListedItemsProtocols.swift */,
+				4A6CAC712AFC80B900B21E59 /* ItemCell.swift */,
 				4A6CAC5C2AFC702800B21E59 /* ListedItemsInteractor.swift */,
+				4A6CAC592AFC702800B21E59 /* ListedItemsPresenter.swift */,
+				4A6CAC5B2AFC702800B21E59 /* ListedItemsProtocols.swift */,
+				4A6CAC5A2AFC702800B21E59 /* ListedItemsViewController.swift */,
 				4A6CAC5D2AFC702800B21E59 /* ListedItemsWireframe.swift */,
 			);
 			path = ListedItems;
+			sourceTree = "<group>";
+		};
+		4A6CAC6E2AFC7DA600B21E59 /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				4A6CAC6F2AFC7DBB00B21E59 /* GetItemListPerChildrenCategoryParameters.swift */,
+			);
+			path = Parameters;
 			sourceTree = "<group>";
 		};
 		5FDCED34DA14ED37758A6589 /* Frameworks */ = {
@@ -572,6 +598,7 @@
 				4A6CAC202AFC0B6C00B21E59 /* ChildrenCategory.swift in Sources */,
 				4A4A076E2AF98E500081C066 /* Optional+IsNill.swift in Sources */,
 				4A2864532AF9A292003B4943 /* UIViewController+DismissPresentedViewController.swift in Sources */,
+				4A6CAC692AFC77D500B21E59 /* GetItemListPerChildrenCategoryResponse.swift in Sources */,
 				4A6CAC1C2AFBDFC600B21E59 /* UIViewController+ScreenWidth.swift in Sources */,
 				4A6CABFF2AFAD7BB00B21E59 /* DataSource.swift in Sources */,
 				4A2864552AF9A2DB003B4943 /* UIViewController+isPresenting.swift in Sources */,
@@ -581,15 +608,18 @@
 				4A4A074A2AF984210081C066 /* SplashInteractor.swift in Sources */,
 				4A6CAC5F2AFC702800B21E59 /* ListedItemsPresenter.swift in Sources */,
 				4A6CABF62AFABBEF00B21E59 /* RootCategoriesProtocols.swift in Sources */,
+				4A6CAC672AFC778400B21E59 /* GetItemListPerChildrenCategoryClient.swift in Sources */,
 				4A6CAC632AFC702800B21E59 /* ListedItemsWireframe.swift in Sources */,
 				4A6CABF82AFABBEF00B21E59 /* RootCategoriesWireframe.swift in Sources */,
 				4A6CAC122AFBDBC100B21E59 /* CollectionViewable.swift in Sources */,
 				4A4A075B2AF986D60081C066 /* GoBackRequestable.swift in Sources */,
+				4A6CAC722AFC80B900B21E59 /* ItemCell.swift in Sources */,
 				4A6CAC182AFBDC7500B21E59 /* CollectionViewSizeable.swift in Sources */,
 				4A6CAC382AFC130E00B21E59 /* ChildrenCategoriesProtocols.swift in Sources */,
 				4A2864512AF9A212003B4943 /* Array+Coordinator.swift in Sources */,
 				4A6CAC1A2AFBDF4400B21E59 /* ScreenSizeMeasurable.swift in Sources */,
 				4A6CABFD2AFAD3F600B21E59 /* RootCategoryCell.swift in Sources */,
+				4A6CAC6D2AFC7D0F00B21E59 /* ParametersConvertible.swift in Sources */,
 				4A6CAC0C2AFBDA5C00B21E59 /* Withable.swift in Sources */,
 				4A4A076C2AF98E370081C066 /* Optional+isNotNill.swift in Sources */,
 				4A6CAC042AFAD8AF00B21E59 /* DataSourceable.swift in Sources */,
@@ -599,6 +629,7 @@
 				4A28644F2AF9A148003B4943 /* BaseCoordinator.swift in Sources */,
 				4A4A076A2AF98CF50081C066 /* BaseViewController.swift in Sources */,
 				4A6CAC622AFC702800B21E59 /* ListedItemsInteractor.swift in Sources */,
+				4A6CAC6B2AFC79C400B21E59 /* ItemListPerChildrenCategoryRequestable.swift in Sources */,
 				4A4A074B2AF984210081C066 /* SplashWireframe.swift in Sources */,
 				4A6CABF72AFABBEF00B21E59 /* RootCategoriesInteractor.swift in Sources */,
 				4A6CABDB2AFAAA5900B21E59 /* BaseClient.swift in Sources */,
@@ -623,6 +654,7 @@
 				4A6CABDD2AFAAA9700B21E59 /* ClientProtocol.swift in Sources */,
 				4A6CAC612AFC702800B21E59 /* ListedItemsProtocols.swift in Sources */,
 				4A4A07632AF98B320081C066 /* UIViewController+TopMostViewController.swift in Sources */,
+				4A6CAC702AFC7DBB00B21E59 /* GetItemListPerChildrenCategoryParameters.swift in Sources */,
 				4A6CABD02AFAA6D400B21E59 /* AppEnvironment.swift in Sources */,
 				4A4A07592AF986750081C066 /* DismissRequestable.swift in Sources */,
 				4A28644D2AF9A0C0003B4943 /* Coordinator.swift in Sources */,

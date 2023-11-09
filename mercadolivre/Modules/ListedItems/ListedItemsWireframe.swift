@@ -6,7 +6,7 @@
 import UIKit
 
 // MARK: - ListedItemsDelegate
-typealias ListedItemsDelegate = BaseModuleDelegate
+typealias ListedItemsDelegate = BaseModuleDelegate 
 
 
 // MARK: - ListedItemsWireframe
@@ -15,7 +15,8 @@ enum ListedItemsWireframe {
         let view = ListedItemsViewController()
         let presenter = ListedItemsPresenter()
         let interactor = ListedItemsInteractor(
-            childrenCategoryId: childrenCategoryId
+            childrenCategoryId: childrenCategoryId,
+            getItemListPerChildrenCategoryClient: GetItemListPerChildrenCategoryClient()
         )
 
         view.presenter = presenter
