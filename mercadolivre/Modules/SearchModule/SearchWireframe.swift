@@ -6,7 +6,7 @@
 import UIKit
 
 // MARK: - SearchDelegate
-typealias SearchDelegate = BaseModuleDelegate
+typealias SearchDelegate = BaseModuleDelegate & SearchedItemListRequestable
 
 
 // MARK: - SearchWireframe

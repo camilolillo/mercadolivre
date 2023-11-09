@@ -9,6 +9,13 @@ import UIKit
 
 final class AppCoordinator: BaseCoordinator {
     
+    private var searchNavigationControllerToPresent: UINavigationController? {
+        didSet {
+            guard let searchNavigationControllerToPresent else { return }
+            navigationController.present(searchNavigationControllerToPresent, animated: true)
+        }
+    }
+    
     override func start() {
         let vc = SplashWireframe.createModule(with: self)
         navigationController.setViewControllers([vc], animated: true)
@@ -32,13 +39,13 @@ extension AppCoordinator: ChildrenCategoriesModuleRequestable {
 
 extension AppCoordinator: ItemListPerChildrenCategoryRequestable {
     func onItemListRequested(with childrenCategoryId: String) {
-        let vc = ListedItemsWireframe.createModule(with: self, childrenCategoryId: childrenCategoryId)
+        let vc = ListedItemsWireframe.createModule(with: self, childrenCategoryId: childrenCategoryId, itemList: nil)
         navigationController.pushViewController(vc, animated: true)
     }
 }
 
 extension AppCoordinator: SearchItemRequestable {
-    func onSearchItemRequested(with handler: CompletionHandler) {
+    func onSearchItemRequested() {
         let vc = SearchWireframe.createModule(with: self)
         let nav = UINavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .pageSheet
@@ -47,6 +54,15 @@ extension AppCoordinator: SearchItemRequestable {
                 sheet.detents = [.medium()]
             }
         }
-        navigationController.present(nav, animated: true)
+        self.searchNavigationControllerToPresent = nav
+    }
+}
+
+extension AppCoordinator: SearchedItemListRequestable {
+    func onSearchedItemListRequested(items: [Item]) {
+        let vc = ListedItemsWireframe.createModule(with: self, childrenCategoryId: "", itemList: items)
+        searchNavigationControllerToPresent?.dismiss(animated: true) {
+            self.navigationController.pushViewController(vc, animated: true)
+        }
     }
 }

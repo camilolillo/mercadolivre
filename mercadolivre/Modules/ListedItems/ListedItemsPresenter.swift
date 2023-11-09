@@ -25,9 +25,7 @@ extension ListedItemsPresenter: ListedItemsPresenterProtocol {
         delegate?.onGoBackRequested()
     }
     func onSearchButtonPressed() {
-        delegate?.onSearchItemRequested() {
-            //TODO
-        }
+        delegate?.onSearchItemRequested()
     }
 }
 

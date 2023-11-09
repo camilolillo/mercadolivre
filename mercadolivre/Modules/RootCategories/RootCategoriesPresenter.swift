@@ -21,9 +21,7 @@ final class RootCategoriesPresenter {
 // MARK: - CategoriesPresenterProtocol
 extension RootCategoriesPresenter: RootCategoriesPresenterProtocol {
     func onSearchButtonPressed() {
-        delegate?.onSearchItemRequested() {
-            //TODO
-        }
+        delegate?.onSearchItemRequested()
     }
 }
 

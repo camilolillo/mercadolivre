@@ -24,9 +24,7 @@ extension ChildrenCategoriesPresenter: ChildrenCategoriesPresenterProtocol {
         delegate?.onGoBackRequested()
     }
     func onSearchButtonPressed() {
-        delegate?.onSearchItemRequested() {
-            //TODO
-        }
+        delegate?.onSearchItemRequested() 
     }
 }
 //MARK: - CollectionViewable

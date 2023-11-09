@@ -10,5 +10,5 @@ import Foundation
 import Foundation
 
 protocol SearchItemRequestable: AnyObject {
-    func onSearchItemRequested(with handler: CompletionHandler)
+    func onSearchItemRequested()
 }

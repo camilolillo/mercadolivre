@@ -17,7 +17,15 @@ extension SearchPresenter: SearchPresenterProtocol {
         guard let key else { return }
         let parameters = SearchParameters(searchKey: key)
         interactor?.requesItemList(with: parameters) { result in
-            print(result)
+            guard let data = result.results else {
+                self.delegate?.onPresentAlertRequested(
+                    title: "",
+                    message: result.message,
+                    handler: nil, cancelHandler: nil
+                )
+                return
+            }
+            self.delegate?.onSearchedItemListRequested(items: data)
         }
     }
 }
