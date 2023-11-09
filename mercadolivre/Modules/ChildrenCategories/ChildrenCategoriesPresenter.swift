@@ -23,6 +23,12 @@ extension ChildrenCategoriesPresenter: ChildrenCategoriesPresenterProtocol {
     func onBackButtonPressed() {
         delegate?.onGoBackRequested()
     }
+    func onSearchButtonPressed() {
+        delegate?.onSearchItemRequested() 
+    }
+}
+//MARK: - CollectionViewable
+extension ChildrenCategoriesPresenter {
     func onItemSelected(indexPath: IndexPath) {
         guard let childrenCategory = dataSource?[indexPath.row] as? ChildrenCategory else {
             return
@@ -42,8 +48,6 @@ extension ChildrenCategoriesPresenter: ChildrenCategoriesPresenterProtocol {
         return (width: view!.screenWidth-24, height: 58)
     }
 }
-
-
 // MARK: - ViewLifecycleable
 extension ChildrenCategoriesPresenter: ViewLifecycleable {
     func onViewDidLoad() {

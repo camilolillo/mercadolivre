@@ -8,13 +8,13 @@
 import Foundation
 
 protocol GetItemListPerChildrenCategoryClientProtocol: AnyObject {
-    func getItemList(with parameters: GetItemListPerChildrenCategoryParameters, result: @escaping ResultHandler<GetItemListPerChildrenCategoryResponse>)
+    func getItemList(with parameters: GetItemListPerChildrenCategoryParameters, result: @escaping ResultHandler<GetItemListResponse>)
 }
 
 final class GetItemListPerChildrenCategoryClient: BaseClient { }
 
 extension GetItemListPerChildrenCategoryClient: GetItemListPerChildrenCategoryClientProtocol {
-    func getItemList(with parameters: GetItemListPerChildrenCategoryParameters, result: @escaping ResultHandler<GetItemListPerChildrenCategoryResponse>) {
+    func getItemList(with parameters: GetItemListPerChildrenCategoryParameters, result: @escaping ResultHandler<GetItemListResponse>) {
         request(resource: AppRouter.getItemsPerChildrenCategory(parameters), result: result)
     }
 }

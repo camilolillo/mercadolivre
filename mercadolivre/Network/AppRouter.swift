@@ -13,6 +13,7 @@ enum AppRouter {
     case getRootCategories
     case getChildrenCategories(String)
     case getItemsPerChildrenCategory(ParametersConvertible)
+    case search(ParametersConvertible)
 }
 
 // MARK: - Endpoint
@@ -21,7 +22,7 @@ extension AppRouter: Endpoint {
     // MARK: - BaseURL
     var baseURL: URL? {
         switch self {
-        case .getRootCategories, .getChildrenCategories, .getItemsPerChildrenCategory:
+        case .getRootCategories, .getChildrenCategories, .getItemsPerChildrenCategory, .search:
             return AppEnvironment.baseURL
         }
     }
@@ -31,7 +32,7 @@ extension AppRouter: Endpoint {
         switch self {
         case .getRootCategories: return "sites/MLC/categories"
         case .getChildrenCategories(let rootCategoryId): return "categories/\(rootCategoryId)"
-        case .getItemsPerChildrenCategory: return "sites/MLC/search"
+        case .getItemsPerChildrenCategory, .search: return "sites/MLC/search"
         }
     }
 
@@ -48,7 +49,7 @@ extension AppRouter: Endpoint {
     // MARK: - HTTPMethod
     var method: HTTPMethod {
         switch self {
-        case .getRootCategories, .getChildrenCategories, .getItemsPerChildrenCategory:
+        case .getRootCategories, .getChildrenCategories, .getItemsPerChildrenCategory, .search:
             return .get
         }
     }
@@ -56,7 +57,7 @@ extension AppRouter: Endpoint {
     // MARK: - Parameters
     var parameters: Parameters {
         switch self {
-        case .getItemsPerChildrenCategory(let parameters):
+        case .getItemsPerChildrenCategory(let parameters), .search(let parameters):
             return parameters.asParameters
         default:
             return [:]

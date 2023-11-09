@@ -26,4 +26,5 @@ protocol RootCategoriesInteractorProtocol: AnyObject {
 // MARK: - Presenter
 protocol RootCategoriesPresenterProtocol: ViewLifecycleable, CollectionViewable {
     func onItemSelected(indexPath: IndexPath)
+    func onSearchButtonPressed()
 }

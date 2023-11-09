@@ -14,6 +14,7 @@ final class ListedItemsPresenter {
     private var dataSource: [ItemCellDataSource]? {
         didSet {
             view?.reloadData()
+            view?.set(loadingStatus: .loaded)
         }
     }
 }
@@ -23,6 +24,9 @@ extension ListedItemsPresenter: ListedItemsPresenterProtocol {
     func onBackButtonPressed() {
         delegate?.onGoBackRequested()
     }
+    func onSearchButtonPressed() {
+        delegate?.onSearchItemRequested()
+    }
 }
 
 
@@ -30,6 +34,7 @@ extension ListedItemsPresenter: ListedItemsPresenterProtocol {
 extension ListedItemsPresenter: ViewLifecycleable {
     func onViewDidLoad() {
         let parameters = GetItemListPerChildrenCategoryParameters(childrenCategoryId: interactor?.getChildrenCategoryId() ?? "")
+        view?.set(loadingStatus: .loading)
         interactor?.requesItemList(with: parameters) { result in
             guard let data = result.results else {
                 self.delegate?.onPresentAlertRequested(

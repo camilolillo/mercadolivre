@@ -29,4 +29,5 @@ protocol ChildrenCategoriesInteractorProtocol: AnyObject {
 protocol ChildrenCategoriesPresenterProtocol: ViewLifecycleable, CollectionViewable {
     func onItemSelected(indexPath: IndexPath)
     func onBackButtonPressed()
+    func onSearchButtonPressed()
 }
