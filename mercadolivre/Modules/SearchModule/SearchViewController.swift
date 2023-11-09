@@ -22,6 +22,19 @@ final class SearchViewController: BaseViewController {
         return field
     }()
     
+    private lazy var searchButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Buscar", for: .normal)
+        button.setTitleColor(.systemBlue, for: .normal)
+        button.layer.cornerRadius = 12
+        button.addTarget(self, action: #selector(onSearchButtonPressed(sender:)), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc func onSearchButtonPressed(sender: UIButton) {
+        presenter?.onSearchButtonPressed(key: searchField.text)
+    }
 }
 
 // MARK: - Lifecycle
@@ -38,12 +51,17 @@ extension SearchViewController {
         presenter?.onViewWillAppear()
         
         view.addSubview(searchField)
+        view.addSubview(searchButton)
         
         NSLayoutConstraint.activate([
             searchField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
             searchField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
             searchField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
-            searchField.heightAnchor.constraint(equalToConstant: 38)
+            searchField.heightAnchor.constraint(equalToConstant: 50),
+            searchButton.widthAnchor.constraint(equalTo: searchField.widthAnchor),
+            searchButton.heightAnchor.constraint(equalTo: searchField.heightAnchor),
+            searchButton.topAnchor.constraint(equalTo: searchField.bottomAnchor, constant: 12),
+            searchButton.centerXAnchor.constraint(equalTo: searchField.centerXAnchor)
         ])
     }
 }

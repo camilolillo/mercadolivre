@@ -14,7 +14,9 @@ enum SearchWireframe {
     static func createModule(with delegate: SearchDelegate) -> UIViewController {
         let view = SearchViewController()
         let presenter = SearchPresenter()
-        let interactor = SearchInteractor()
+        let interactor = SearchInteractor(
+            searchClient: SearchClient()
+        )
 
         view.presenter = presenter
 

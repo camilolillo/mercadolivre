@@ -264,10 +264,10 @@
 		4A4652042AFC931000076C6A /* SearchModule */ = {
 			isa = PBXGroup;
 			children = (
-				4A4652072AFC935E00076C6A /* SearchPresenter.swift */,
-				4A4652082AFC935E00076C6A /* SearchViewController.swift */,
-				4A4652092AFC935E00076C6A /* SearchProtocols.swift */,
 				4A46520A2AFC935E00076C6A /* SearchInteractor.swift */,
+				4A4652072AFC935E00076C6A /* SearchPresenter.swift */,
+				4A4652092AFC935E00076C6A /* SearchProtocols.swift */,
+				4A4652082AFC935E00076C6A /* SearchViewController.swift */,
 				4A46520B2AFC935E00076C6A /* SearchWireframe.swift */,
 			);
 			path = SearchModule;
