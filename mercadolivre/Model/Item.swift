@@ -16,3 +16,4 @@ struct Item: Codable {
     var price: Int
     var pictures: [ItemPicture]
 }
+

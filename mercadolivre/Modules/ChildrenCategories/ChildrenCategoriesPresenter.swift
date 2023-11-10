@@ -29,21 +29,7 @@ extension ChildrenCategoriesPresenter: ChildrenCategoriesPresenterProtocol {
         }
         delegate?.onItemListRequested(with: childrenCategory.id)
     }
-    func getNumberOfItems(in section: Int) -> Int {
-        return dataSource?.count ?? 0
-    }
-    func onCellForItem(in section: Int, at index: Int) -> DataSource? {
-        return dataSource?[index]
-    }
-    func onReuseIdentifierRequested(in section: Int, at index: Int) -> String {
-        return ChildrenCategoryCell.reuseIdentifier
-    }
-    func onSizeForItem(in section: Int, at index: Int) -> (width: Double, height: Double) {
-        return (width: view!.screenWidth-24, height: 58)
-    }
 }
-
-
 // MARK: - ViewLifecycleable
 extension ChildrenCategoriesPresenter: ViewLifecycleable {
     func onViewDidLoad() {
@@ -71,4 +57,19 @@ extension ChildrenCategoriesPresenter: ViewLifecycleable {
         }
     }
     func onViewWillAppear() {}
+}
+//MARK: - CollectionViewable
+extension ChildrenCategoriesPresenter: CollectionViewable {
+    func getNumberOfItems(in section: Int) -> Int {
+        return dataSource?.count ?? 0
+    }
+    func onCellForItem(in section: Int, at index: Int) -> DataSource? {
+        return dataSource?[index]
+    }
+    func onReuseIdentifierRequested(in section: Int, at index: Int) -> String {
+        return ChildrenCategoryCell.reuseIdentifier
+    }
+    func onSizeForItem(in section: Int, at index: Int) -> (width: Double, height: Double) {
+        return (width: view!.screenWidth-24, height: 58)
+    }
 }

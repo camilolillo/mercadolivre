@@ -40,7 +40,6 @@ extension AppCoordinator: ItemListPerChildrenCategoryRequestable {
 extension AppCoordinator: ItemRequestable {
     func onItemDetailRequested(with itemId: String) {
         let vc = ItemWireframe.createModule(with: self, itemId: itemId)
-        let nc = UINavigationController(rootViewController: vc)
-        navigationController.present(nc, animated: true)
+        navigationController.present(vc, animated: true)
     }
 }

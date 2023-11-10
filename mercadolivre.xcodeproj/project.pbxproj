@@ -29,6 +29,7 @@
 		4A4652302AFD74B800076C6A /* GetItemResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A46522F2AFD74B800076C6A /* GetItemResult.swift */; };
 		4A4652322AFD8A7B00076C6A /* ItemRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4652312AFD8A7B00076C6A /* ItemRequestable.swift */; };
 		4A46523B2AFE8B0A00076C6A /* ItemPicturesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A46523A2AFE8B0A00076C6A /* ItemPicturesCell.swift */; };
+		4A46523D2AFEC31F00076C6A /* Int+IntToStringAsCLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A46523C2AFEC31F00076C6A /* Int+IntToStringAsCLP.swift */; };
 		4A4A072D2AF934240081C066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A072C2AF934240081C066 /* AppDelegate.swift */; };
 		4A4A07362AF934250081C066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4A07352AF934250081C066 /* Assets.xcassets */; };
 		4A4A07472AF984210081C066 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A07412AF984210081C066 /* SplashPresenter.swift */; };
@@ -126,6 +127,7 @@
 		4A46522F2AFD74B800076C6A /* GetItemResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemResult.swift; sourceTree = "<group>"; };
 		4A4652312AFD8A7B00076C6A /* ItemRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRequestable.swift; sourceTree = "<group>"; };
 		4A46523A2AFE8B0A00076C6A /* ItemPicturesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPicturesCell.swift; sourceTree = "<group>"; };
+		4A46523C2AFEC31F00076C6A /* Int+IntToStringAsCLP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+IntToStringAsCLP.swift"; sourceTree = "<group>"; };
 		4A4A07292AF934240081C066 /* mercadolivre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mercadolivre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4A072C2AF934240081C066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A4A07352AF934250081C066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 				4A6CAC1D2AFBDFF700B21E59 /* UIViewController+ScreenHeight.swift */,
 				4A6CAC1B2AFBDFC600B21E59 /* UIViewController+ScreenWidth.swift */,
 				4A4A07622AF98B320081C066 /* UIViewController+TopMostViewController.swift */,
+				4A46523C2AFEC31F00076C6A /* Int+IntToStringAsCLP.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				4A6CABF62AFABBEF00B21E59 /* RootCategoriesProtocols.swift in Sources */,
 				4A6CAC672AFC778400B21E59 /* GetItemListPerChildrenCategoryClient.swift in Sources */,
 				4A4652282AFD312700076C6A /* ItemWireframe.swift in Sources */,
+				4A46523D2AFEC31F00076C6A /* Int+IntToStringAsCLP.swift in Sources */,
 				4A6CAC632AFC702800B21E59 /* ListedItemsWireframe.swift in Sources */,
 				4A6CABF82AFABBEF00B21E59 /* RootCategoriesWireframe.swift in Sources */,
 				4A4652302AFD74B800076C6A /* GetItemResult.swift in Sources */,

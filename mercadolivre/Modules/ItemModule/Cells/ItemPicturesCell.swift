@@ -9,10 +9,6 @@ import Foundation
 import UIKit
 import Kingfisher
 
-protocol ItemPicturesCellDataSource: DataSource {
-    var pictures: [ItemPicture] { get }
-}
-
 final class ItemPicturesCell: DataSourceableCell {
         
     var dataSource: ItemPicturesCellDataSource? {
@@ -22,6 +18,6 @@ final class ItemPicturesCell: DataSourceableCell {
     }
     
     override func setupCell() {
-
+        contentView.backgroundColor = .blue
     }
 }

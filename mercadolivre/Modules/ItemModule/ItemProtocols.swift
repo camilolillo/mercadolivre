@@ -4,7 +4,7 @@
 //
 
 // MARK: - View
-protocol ItemViewProtocol: AnyObject {
+protocol ItemViewProtocol: ScreenSizeMeasurable {
     func set(loadingStatus: LoadingStatus)
     func set(item: Item)
     func reloadData()
@@ -19,4 +19,4 @@ protocol ItemInteractorProtocol: AnyObject {
 
 
 // MARK: - Presenter
-protocol ItemPresenterProtocol: ViewLifecycleable {}
+protocol ItemPresenterProtocol: ViewLifecycleable, CollectionViewable {}

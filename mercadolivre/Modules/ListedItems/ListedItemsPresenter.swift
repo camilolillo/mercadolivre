@@ -23,6 +23,11 @@ extension ListedItemsPresenter: ListedItemsPresenterProtocol {
     func onBackButtonPressed() {
         delegate?.onGoBackRequested()
     }
+    func onItemSelected(indexPath: IndexPath) {
+        if let item = dataSource?[indexPath.row] as? ListedItem {
+            delegate?.onItemDetailRequested(with: item.id)
+        }
+    }
 }
 
 
@@ -46,11 +51,6 @@ extension ListedItemsPresenter: ViewLifecycleable {
 }
 //MARK: -  CollectionViewable
 extension ListedItemsPresenter: CollectionViewable {
-    func onItemSelected(indexPath: IndexPath) {
-        if let item = dataSource?[indexPath.row] as? ListedItem {
-            delegate?.onItemDetailRequested(with: item.id)
-        }
-    }
     func getNumberOfItems(in section: Int) -> Int {
         return dataSource?.count ?? 0
     }

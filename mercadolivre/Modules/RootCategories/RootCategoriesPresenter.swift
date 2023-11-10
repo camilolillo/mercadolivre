@@ -19,7 +19,14 @@ final class RootCategoriesPresenter {
 }
 
 // MARK: - CategoriesPresenterProtocol
-extension RootCategoriesPresenter: RootCategoriesPresenterProtocol {}
+extension RootCategoriesPresenter: RootCategoriesPresenterProtocol {
+    func onItemSelected(indexPath: IndexPath) {
+        guard let rootCategory = dataSource?[indexPath.row] as? RootCategory else {
+            return
+        }
+        delegate?.onChildrenCategoriesModuleRequested(with: rootCategory.id)
+    }
+}
 
 // MARK: - ViewLifecycleable
 extension RootCategoriesPresenter: ViewLifecycleable {
@@ -42,12 +49,6 @@ extension RootCategoriesPresenter: ViewLifecycleable {
 }
 //MARK: - CollectionViewable
 extension RootCategoriesPresenter: CollectionViewable {
-    func onItemSelected(indexPath: IndexPath) {
-        guard let rootCategory = dataSource?[indexPath.row] as? RootCategory else {
-            return
-        }
-        delegate?.onChildrenCategoriesModuleRequested(with: rootCategory.id)
-    }
     func getNumberOfItems(in section: Int) -> Int {
         return dataSource?.count ?? 0
     }
