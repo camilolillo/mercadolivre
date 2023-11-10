@@ -35,7 +35,21 @@ final class ItemViewController: BaseViewController {
         return view
     }()
     
-    
+//    private lazy var picturesCollectionView: UICollectionView = {
+//        let layout = UICollectionViewFlowLayout()
+//        layout.scrollDirection = .horizontal
+//        layout.minimumLineSpacing = 8
+//        layout.minimumInteritemSpacing = 8
+//        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+//        collectionView.isPagingEnabled = true
+//        collectionView.translatesAutoresizingMaskIntoConstraints = false
+//        collectionView.dataSource = self
+//        collectionView.delegate = self
+//        collectionView.register(ChildrenCategoryCell.self, kind: ChildrenCategoryCell.reuseIdentifier)
+//        collectionView.showsHorizontalScrollIndicator = false
+//        collectionView.backgroundColor = .yellow
+//        collectionView.showsVerticalScrollIndicator = false
+//    }()
     
 }
 
@@ -49,7 +63,7 @@ extension ItemViewController {
         view.addSubview(scrollView)
         scrollView.addSubview(stackView)
         
-        stackView.addArrangedSubview(testView)
+        
         
         NSLayoutConstraint.activate (
             [

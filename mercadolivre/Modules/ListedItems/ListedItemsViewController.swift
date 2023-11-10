@@ -18,7 +18,7 @@ final class ListedItemsViewController: BaseViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(ItemCell.self)
+        collectionView.register(ItemCell.self, forCellWithReuseIdentifier: ItemCell.reuseIdentifier)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .yellow
         collectionView.showsVerticalScrollIndicator = false

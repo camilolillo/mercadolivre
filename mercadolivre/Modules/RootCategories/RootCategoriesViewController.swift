@@ -18,7 +18,7 @@ final class RootCategoriesViewController: BaseViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(RootCategoryCell.self)
+        collectionView.register(RootCategoryCell.self, forCellWithReuseIdentifier: RootCategoryCell.reuseIdentifier)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .yellow
         collectionView.showsVerticalScrollIndicator = false

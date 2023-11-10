@@ -67,7 +67,6 @@
 		4A6CAC022AFAD86300B21E59 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC012AFAD86300B21E59 /* BaseCell.swift */; };
 		4A6CAC042AFAD8AF00B21E59 /* DataSourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC032AFAD8AF00B21E59 /* DataSourceable.swift */; };
 		4A6CAC082AFBC7F900B21E59 /* GetRootCategoriesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC072AFBC7F900B21E59 /* GetRootCategoriesResult.swift */; };
-		4A6CAC0A2AFBDA1A00B21E59 /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC092AFBDA1A00B21E59 /* UICollectionView+Register.swift */; };
 		4A6CAC0C2AFBDA5C00B21E59 /* Withable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC0B2AFBDA5C00B21E59 /* Withable.swift */; };
 		4A6CAC0E2AFBDA9800B21E59 /* Stringable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC0D2AFBDA9800B21E59 /* Stringable.swift */; };
 		4A6CAC102AFBDB1500B21E59 /* UICollectionReusableView+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CAC0F2AFBDB1500B21E59 /* UICollectionReusableView+ReuseIdentifier.swift */; };
@@ -167,7 +166,6 @@
 		4A6CAC012AFAD86300B21E59 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		4A6CAC032AFAD8AF00B21E59 /* DataSourceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceable.swift; sourceTree = "<group>"; };
 		4A6CAC072AFBC7F900B21E59 /* GetRootCategoriesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRootCategoriesResult.swift; sourceTree = "<group>"; };
-		4A6CAC092AFBDA1A00B21E59 /* UICollectionView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift"; sourceTree = "<group>"; };
 		4A6CAC0B2AFBDA5C00B21E59 /* Withable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Withable.swift; sourceTree = "<group>"; };
 		4A6CAC0D2AFBDA9800B21E59 /* Stringable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stringable.swift; sourceTree = "<group>"; };
 		4A6CAC0F2AFBDB1500B21E59 /* UICollectionReusableView+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+ReuseIdentifier.swift"; sourceTree = "<group>"; };
@@ -432,7 +430,6 @@
 				4A4A07642AF98B7C0081C066 /* UIApplication+KeyWindow.swift */,
 				4A2864452AF994E9003B4943 /* UIApplication+TopMostViewController.swift */,
 				4A6CAC0F2AFBDB1500B21E59 /* UICollectionReusableView+ReuseIdentifier.swift */,
-				4A6CAC092AFBDA1A00B21E59 /* UICollectionView+Register.swift */,
 				4A2864522AF9A292003B4943 /* UIViewController+DismissPresentedViewController.swift */,
 				4A2864542AF9A2DB003B4943 /* UIViewController+isPresenting.swift */,
 				4A6CAC1D2AFBDFF700B21E59 /* UIViewController+ScreenHeight.swift */,
@@ -730,7 +727,6 @@
 				4A6CAC372AFC130E00B21E59 /* ChildrenCategoriesViewController.swift in Sources */,
 				4A6CAC0E2AFBDA9800B21E59 /* Stringable.swift in Sources */,
 				4A4A07472AF984210081C066 /* SplashPresenter.swift in Sources */,
-				4A6CAC0A2AFBDA1A00B21E59 /* UICollectionView+Register.swift in Sources */,
 				4A6CABF42AFABBEF00B21E59 /* RootCategoriesPresenter.swift in Sources */,
 				4A6CABDD2AFAAA9700B21E59 /* ClientProtocol.swift in Sources */,
 				4A6CAC612AFC702800B21E59 /* ListedItemsProtocols.swift in Sources */,
