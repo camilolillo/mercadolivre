@@ -11,10 +11,13 @@ typealias ItemDelegate = BaseModuleDelegate
 
 // MARK: - ItemWireframe
 enum ItemWireframe {
-    static func createModule(with delegate: ItemDelegate) -> UIViewController {
+    static func createModule(with delegate: ItemDelegate, itemId: String) -> UIViewController {
         let view = ItemViewController()
         let presenter = ItemPresenter()
-        let interactor = ItemInteractor()
+        let interactor = ItemInteractor(
+            itemId: itemId,
+            getItemClient: GetItemClient()
+        )
 
         view.presenter = presenter
 

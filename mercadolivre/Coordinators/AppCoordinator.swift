@@ -5,6 +5,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class AppCoordinator: BaseCoordinator {
     
@@ -33,5 +34,13 @@ extension AppCoordinator: ItemListPerChildrenCategoryRequestable {
     func onItemListRequested(with childrenCategoryId: String) {
         let vc = ListedItemsWireframe.createModule(with: self, childrenCategoryId: childrenCategoryId)
         navigationController.pushViewController(vc, animated: true)
+    }
+}
+
+extension AppCoordinator: ItemRequestable {
+    func onItemDetailRequested(with itemId: String) {
+        let vc = ItemWireframe.createModule(with: self, itemId: itemId)
+        let nc = UINavigationController(rootViewController: vc)
+        navigationController.present(nc, animated: true)
     }
 }

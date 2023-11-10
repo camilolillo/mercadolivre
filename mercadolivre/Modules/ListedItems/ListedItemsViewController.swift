@@ -114,7 +114,7 @@ extension ListedItemsViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //TODO
+        presenter?.onItemSelected(indexPath: indexPath)
     }
 
 }

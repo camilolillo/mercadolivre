@@ -7,15 +7,14 @@
 
 import Foundation
 
-protocol GetItemProtocol: AnyObject {
-    func getItem(with itemId: String, result: @escaping ResultHandler<Item>)
+protocol GetItemClientProtocol: AnyObject {
+    func getItem(with itemId: String, result: @escaping ResultHandler<Item?>)
 }
 
 final class GetItemClient: BaseClient { }
 
-extension GetItemClient: GetItemProtocol {
-    func getItem(with itemId: String, result: @escaping ResultHandler<Item>) {
+extension GetItemClient: GetItemClientProtocol {
+    func getItem(with itemId: String, result: @escaping ResultHandler<Item?>) {
         request(resource: AppRouter.getItem(itemId), result: result)
     }
 }
-    

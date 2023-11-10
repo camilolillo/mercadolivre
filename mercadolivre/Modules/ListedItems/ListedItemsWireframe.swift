@@ -6,7 +6,7 @@
 import UIKit
 
 // MARK: - ListedItemsDelegate
-typealias ListedItemsDelegate = BaseModuleDelegate 
+typealias ListedItemsDelegate = BaseModuleDelegate & ItemRequestable
 
 
 // MARK: - ListedItemsWireframe
