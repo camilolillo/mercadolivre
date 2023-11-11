@@ -15,6 +15,7 @@ final class ItemViewController: BaseViewController {
             itemTitle.text = item.title
             itemSubtitle.text = item.subtitle
             itemPrice.text = item.price.intToStringAsCLP()
+            pageControl.numberOfPages = item.pictures.count
         }
     }
     
@@ -38,18 +39,27 @@ final class ItemViewController: BaseViewController {
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 8
-        layout.minimumInteritemSpacing = 8
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(ChildrenCategoryCell.self, forCellWithReuseIdentifier: ChildrenCategoryCell.reuseIdentifier)
+        collectionView.register(ItemPicturesCell.self, forCellWithReuseIdentifier: ItemPicturesCell.reuseIdentifier)
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = .yellow
         collectionView.showsVerticalScrollIndicator = false
         collectionView.isPagingEnabled = true
         return collectionView
+    }()
+    
+    private lazy var pageControl: UIPageControl = {
+        let control = UIPageControl()
+        control.translatesAutoresizingMaskIntoConstraints = false
+        control.currentPage = 0
+        control.pageIndicatorTintColor = .gray
+        control.currentPageIndicatorTintColor = .systemBlue
+        control.isUserInteractionEnabled = false
+        return control
     }()
     
     private lazy var itemTitle: UILabel = {
@@ -97,12 +107,14 @@ extension ItemViewController {
         
         stackView.addArrangedSubview(collectionView)
         
+        stackView.addArrangedSubview(pageControl)
+        
         titleStackView.addArrangedSubview(itemTitle)
         titleStackView.addArrangedSubview(itemSubtitle)
         stackView.addArrangedSubview(titleStackView)
         
         stackView.addArrangedSubview(itemPrice)
-        
+    
         NSLayoutConstraint.activate (
             [
                 scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -114,7 +126,8 @@ extension ItemViewController {
                 stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
                 stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
                 stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
-                collectionView.heightAnchor.constraint(equalToConstant: 500),
+                collectionView.heightAnchor.constraint(equalToConstant: 400),
+                collectionView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
                 itemTitle.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 0.6),
                 itemSubtitle.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 0.6)
             ]
@@ -138,6 +151,14 @@ extension ItemViewController: ItemViewProtocol {
     }
     func reloadData() {
         collectionView.reloadData()
+    }
+}
+//MARK: - UICollectionViewDelegate
+extension ItemViewController: UICollectionViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageWidth = scrollView.frame.size.width
+        let page = Int(floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1)
+        pageControl.currentPage = page
     }
 }
 // MARK: - UICollectionViewDataSource
