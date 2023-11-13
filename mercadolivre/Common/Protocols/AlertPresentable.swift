@@ -34,7 +34,7 @@ extension AlertPresentable {
         }
         
         let alertController = UIAlertController(
-            title: alertTitle,x
+            title: alertTitle,
             message: alertMessage,
             preferredStyle: .alert
         )
