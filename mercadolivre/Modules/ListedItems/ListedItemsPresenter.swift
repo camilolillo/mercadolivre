@@ -37,16 +37,16 @@ extension ListedItemsPresenter: ViewLifecycleable {
     func onViewDidLoad() {
         let parameters = GetItemListPerChildrenCategoryParameters(childrenCategoryId: interactor?.getChildrenCategoryId() ?? "")
         view?.set(loadingStatus: .loading)
-        interactor?.requesItemList(with: parameters) { result in
+        interactor?.requesItemList(with: parameters) { [self] result in
             guard let data = result.results else {
-                self.delegate?.onPresentAlertRequested(
+                delegate?.onPresentAlertRequested(
                     title: "",
                     message: result.message,
                     handler: { self.view?.set(loadingStatus: .loaded) }, cancelHandler: nil
                 )
                 return
             }
-            self.dataSource = data
+            dataSource = data
         }
     }
     func onViewWillAppear() {}

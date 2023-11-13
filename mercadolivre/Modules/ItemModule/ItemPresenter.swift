@@ -23,9 +23,9 @@ extension ItemPresenter: ItemPresenterProtocol {}
 // MARK: - ViewLifecycleable
 extension ItemPresenter: ViewLifecycleable {
     func onViewDidLoad() {
-        interactor?.getItem(with: interactor?.getItemId() ?? "") { result in
+        interactor?.getItem(with: interactor?.getItemId() ?? "") { [self] result in
             guard let item = result.item else {
-                self.delegate?.onPresentAlertRequested(
+                delegate?.onPresentAlertRequested(
                     title: "",
                     message: result.message,
                     handler: { self.view?.set(loadingStatus: .loaded) },
@@ -33,8 +33,8 @@ extension ItemPresenter: ViewLifecycleable {
                 )
                 return
             }
-            self.view?.set(item: item)
-            self.picturesDataSource = item.pictures
+            view?.set(item: item)
+            picturesDataSource = item.pictures
         }
     }
     func onViewWillAppear() {}
