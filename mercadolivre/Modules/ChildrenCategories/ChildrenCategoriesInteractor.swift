@@ -33,7 +33,6 @@ extension ChildrenCategoriesInteractor: ChildrenCategoriesInteractorProtocol {
                 )
                 handler(result)
             case .failure(let error):
-                print(error)
                 handler(failureResult)
             }
         }

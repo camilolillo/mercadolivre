@@ -23,7 +23,6 @@ extension RootCategoriesInteractor: RootCategoriesInteractorProtocol {
                 }
                 handler(GetRootCategoriesResult(message: "Success", rootCategories: response))
             case .failure(let error):
-                print(error)
                 handler(GetRootCategoriesResult(message: .defaultAlertMessage))
             }
         }

@@ -28,12 +28,6 @@ extension Endpoint where Self: URLRequestConvertible {
 
         var urlRequest = URLRequest(url: url)
 
-        defer {
-            print("Endpoint: \(Self.self)")
-            print("URL: \(urlRequest)")
-            print("Headers: \(String(describing: urlRequest.allHTTPHeaderFields ?? [:]))\n")
-        }
-
         // MARK: - Headers
         urlRequest.headers = headers
 

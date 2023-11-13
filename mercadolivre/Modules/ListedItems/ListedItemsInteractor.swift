@@ -26,7 +26,6 @@ extension ListedItemsInteractor: ListedItemsInteractorProtocol {
                 }
                 handler(GetItemListPerChildrenCategoryResult(message: "Success", results: response.results))
             case .failure(let error):
-                print(error)
                 handler(failureResult)
             }
         }

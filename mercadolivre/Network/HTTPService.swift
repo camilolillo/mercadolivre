@@ -16,15 +16,11 @@ extension HTTPService {
         var jsonDecoder: JSONDecoder { .init() }
         return AF
             .request(resource)
-            .responseString { print("\n\(self).\(#function).responseString: \($0)") }
             .responseDecodable(decoder: jsonDecoder) { (response: AFDataResponse<T>) in
                 switch response.result {
                 case .success(let decodedObject):
-                    print("\(self).\(#function).decodedObject: \(decodedObject)\n")
                     result(.success(decodedObject))
                 case .failure(let error):
-                    print("\(self).\(#function).error: \(error)")
-                    print("\(self).\(#function).error.localizedDescription: \(error.localizedDescription)\n")
                     result(.failure(error))
                 }
             }

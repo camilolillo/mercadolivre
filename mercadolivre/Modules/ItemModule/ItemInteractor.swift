@@ -26,7 +26,6 @@ extension ItemInteractor: ItemInteractorProtocol {
                 }
                 handler(GetItemResult(message: "Success", item: item))
             case .failure(let error):
-                print(error)
                 handler(failureResult)
             }
         }

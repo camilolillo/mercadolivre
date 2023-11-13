@@ -16,7 +16,6 @@ extension UIViewController {
         }
 
         guard presentedViewController.isPresenting else {
-            print("\n\(Self.self).\(#function): \(presentedViewController)")
             presentedViewController.dismiss(animated: animated, completion: completion)
             return
         }
